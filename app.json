@@ -18,8 +18,8 @@
     "homey:manager:geolocation"
   ],
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Jonathan van Bochove",
@@ -245,8 +245,8 @@
           "name": "expectedTodayMaxTemp",
           "type": "number",
           "title": {
-            "en": "Todays expected max temp",
-            "nl": "Verwachte maximale temperatuur"
+            "en": "Exp. max temp todays",
+            "nl": "Verw. max. temperatuur"
           },
           "example": {
             "en": "18",
@@ -257,8 +257,8 @@
           "name": "expectedTodayMinTemp",
           "type": "number",
           "title": {
-            "en": "Todays expected minimum temp",
-            "nl": "Verwachte minimale temperatuur"
+            "en": "Exp. minimum temp today",
+            "nl": "Verw. min. temp."
           },
           "example": {
             "en": "7",
@@ -269,8 +269,8 @@
           "name": "expectedTodayWindForce",
           "type": "number",
           "title": {
-            "en": "Expected windforce for today",
-            "nl": "Verwachte windkracht voor vandaag"
+            "en": "Exp. windforce today",
+            "nl": "Verw. windkracht vandaag"
           },
           "example": {
             "en": "2",
@@ -281,8 +281,8 @@
           "name": "expectedTodayWindSpeedMS",
           "type": "number",
           "title": {
-            "en": "Expected windspeed today MS",
-            "nl": "Verwachte windkracht vandaag MS"
+            "en": "Exp. windspeed today MS",
+            "nl": "Verw. windkracht vandaag MS"
           },
           "example": {
             "en": "2",
@@ -293,8 +293,8 @@
           "name": "expectedTodayWindSpeedKMH",
           "type": "number",
           "title": {
-            "en": "Expected windspeed today KMH",
-            "nl": "Verwachte windkracht vandaag KMH"
+            "en": "Exp. windspeed today KMH",
+            "nl": "Verw. windkracht vandaag KMH"
           },
           "example": {
             "en": "5",
@@ -305,8 +305,8 @@
           "name": "expectedTodayWindDirection",
           "type": "string",
           "title": {
-            "en": "Expected today wind direction",
-            "nl": "Verwachte windrichting vandaag"
+            "en": "Exp. wind direction today",
+            "nl": "Verw. windrichting vandaag"
           },
           "example": {
             "en": "W",
@@ -317,8 +317,8 @@
           "name": "expectedTodayPrecipitation",
           "type": "number",
           "title": {
-            "en": "Expected precipitation today",
-            "nl": "Verwachte neerslag vandaag"
+            "en": "Exp. precipitation today",
+            "nl": "Verw. neerslag vandaag"
           },
           "example": {
             "en": "2",
@@ -329,8 +329,8 @@
           "name": "expectedTodaySunshine",
           "type": "number",
           "title": {
-            "en": "Expected today sunshine",
-            "nl": "Verwachte zonkans vandaag"
+            "en": "Exp. sunshine today",
+            "nl": "Verw. zonkans vandaag"
           },
           "example": {
             "en": "55",
@@ -341,7 +341,7 @@
           "name": "expectedTomorrowRecap",
           "type": "string",
           "title": {
-            "en": "Expected recap tomorrow",
+            "en": "Exp. recap tomorrow",
             "nl": "Verwachting morgen"
           },
           "example": {
@@ -353,8 +353,8 @@
           "name": "expectedTomorrowMaxTemp",
           "type": "number",
           "title": {
-            "en": "Expected max temp tomorrow",
-            "nl": "Verwachte maximale temperatuur morgen"
+            "en": "Exp. max temp tomorrow",
+            "nl": "Verw. max temp morgen"
           },
           "example": {
             "en": "20",
@@ -365,8 +365,8 @@
           "name": "expectedTomorrowMinTemp",
           "type": "number",
           "title": {
-            "en": "Expected tomorrow min temp",
-            "nl": "Verwachte minimum temperatuur morgen"
+            "en": "Exp. min temp tomorrow",
+            "nl": "Verw. min temp morgen"
           },
           "example": {
             "en": "8",
@@ -377,8 +377,8 @@
           "name": "expectedTomorrowWindForce",
           "type": "number",
           "title": {
-            "en": "Expected tomorrow wind force",
-            "nl": "Verwachte windkracht morgen"
+            "en": "Exp. wind force tomorrow",
+            "nl": "Verw. windkracht morgen"
           },
           "example": {
             "en": "2",
@@ -389,8 +389,8 @@
           "name": "expectedTomorrowWindSpeedMS",
           "type": "number",
           "title": {
-            "en": "Expected tomorrow windspeed MS",
-            "nl": "Verwachte windsnelheid morgen MS"
+            "en": "Exp. windspeed MS tomorrow",
+            "nl": "Verw. windsnelheid morgen MS"
           },
           "example": {
             "en": "5",
@@ -401,8 +401,8 @@
           "name": "expectedTomorrowWindSpeedKMH",
           "type": "number",
           "title": {
-            "en": "Expected wind speed tomorrow KMH",
-            "nl": "Verwachte windsnelheid morgen KMH"
+            "en": "Exp. wind speed tomorrow KMH",
+            "nl": "Verw, windsnelheid morgen KMH"
           },
           "example": {
             "en": "10",
@@ -413,8 +413,8 @@
           "name": "expectedTomorrowWindDirection",
           "type": "string",
           "title": {
-            "en": "Expected wind direction tomorrow",
-            "nl": "Verwachte windrichting morgen"
+            "en": "Exp. wind direction tomorrow",
+            "nl": "Verw. windrichting morgen"
           },
           "example": {
             "en": "W",
@@ -425,8 +425,8 @@
           "name": "expectedTomorrowPrecipitation",
           "type": "number",
           "title": {
-            "en": "Expected precipitation tomorrow",
-            "nl": "Verwachte neerslag morgen"
+            "en": "Exp.precipitation tomorrow",
+            "nl": "Verw. neerslag morgen"
           },
           "example": {
             "en": "2",
@@ -437,8 +437,8 @@
           "name": "expectedTomorrowSunshine",
           "type": "number",
           "title": {
-            "en": "Expected sunshine tomorrow",
-            "nl": "Verwachte zonkans morgen"
+            "en": "Exp, sunshine tomorrow",
+            "nl": "Verw. zonkans morgen"
           },
           "example": {
             "en": "55",
@@ -449,108 +449,108 @@
           "name": "expectedDayAfterTomorrowRecap",
           "type": "string",
           "title": {
-            "en": "expectedDayAfterTomorrowRecap",
-            "nl": "expectedDayAfterTomorrowRecap"
+            "en": "Exp. recap day after tomorrow",
+            "nl": "Verwachting overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowRecap",
-            "nl": "expectedDayAfterTomorrowRecap"
+            "en": "Cloudy",
+            "nl": "Bewolkt"
           }
         },
         {
           "name": "expectedDayAfterTomorrowMaxTemp",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowMaxTemp",
-            "nl": "expectedDayAfterTomorrowMaxTemp"
+            "en": "Exp. max temp day after tomorrow",
+            "nl": "Verw. max temp  overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowMaxTemp",
-            "nl": "expectedDayAfterTomorrowMaxTemp"
+            "en": "22",
+            "nl": "22"
           }
         },
         {
           "name": "expectedDayAfterTomorrowMinTemp",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowMinTemp",
-            "nl": "expectedDayAfterTomorrowMinTemp"
+            "en": "Exp. min temp day after tomorrow",
+            "nl": "Verw. min temp overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowMinTemp",
-            "nl": "expectedDayAfterTomorrowMinTemp"
+            "en": "8",
+            "nl": "8"
           }
         },
         {
           "name": "expectedDayAfterTomorrowWindForce",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowWindForce",
-            "nl": "expectedDayAfterTomorrowWindForce"
+            "en": "Exp. windforce day after tomorrow",
+            "nl": "Verw. windkracht overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowWindForce",
-            "nl": "expectedDayAfterTomorrowWindForce"
+            "en": "2",
+            "nl": "2"
           }
         },
         {
           "name": "expectedDayAfterTomorrowWindSpeedMS",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowWindSpeedMS",
-            "nl": "expectedDayAfterTomorrowWindSpeedMS"
+            "en": "Exp. wind speed MS day after tomorrow",
+            "nl": "Verw. windsnelheid MS overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowWindSpeedMS",
-            "nl": "expectedDayAfterTomorrowWindSpeedMS"
+            "en": "5",
+            "nl": "5"
           }
         },
         {
           "name": "expectedDayAfterTomorrowWindSpeedKMH",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowWindSpeedKMH",
-            "nl": "expectedDayAfterTomorrowWindSpeedKMH"
+            "en": "Exp. wind speed KMH day after tomorrow",
+            "nl": "Verw. windsnelheid KMH overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowWindSpeedKMH",
-            "nl": "expectedDayAfterTomorrowWindSpeedKMH"
+            "en": "5",
+            "nl": "5"
           }
         },
         {
           "name": "expectedDayAfterTomorrowWindDirection",
           "type": "string",
           "title": {
-            "en": "expectedDayAfterTomorrowWindDirection",
-            "nl": "expectedDayAfterTomorrowWindDirection"
+            "en": "Exp. wind direction day after tomorrow",
+            "nl": "Verw. windrichting overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowWindDirection",
-            "nl": "expectedDayAfterTomorrowWindDirection"
+            "en": "W",
+            "nl": "W"
           }
         },
         {
           "name": "expectedDayAfterTomorrowPrecipitation",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowPrecipitation",
-            "nl": "expectedDayAfterTomorrowPrecipitation"
+            "en": "Exp. precipitation day after tomorrow",
+            "nl": "Verw. neerslag overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowPrecipitation",
-            "nl": "expectedDayAfterTomorrowPrecipitation"
+            "en": "2",
+            "nl": "2"
           }
         },
         {
           "name": "expectedDayAfterTomorrowSunshine",
           "type": "number",
           "title": {
-            "en": "expectedDayAfterTomorrowSunshine",
-            "nl": "expectedDayAfterTomorrowSunshine"
+            "en": "Exp. sunshine day after tomorrow",
+            "nl": "Verw. zonkans overmorgen"
           },
           "example": {
-            "en": "expectedDayAfterTomorrowSunshine",
-            "nl": "expectedDayAfterTomorrowSunshine"
+            "en": "55",
+            "nl": "55"
           }
         },
         {
