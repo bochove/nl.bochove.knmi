@@ -1,6 +1,6 @@
 {
   "id": "nl.bochove.knmi",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -8,8 +8,8 @@
     "nl": "KNMI (Nederland)"
   },
   "description": {
-    "en": "Fetches dutch weatherdata from the KNMI up to 300 times a day",
-    "nl": "Haalt tot 300 keer per dag de laatste weergegevens op van het KNMI."
+    "en": "Stay up to date on all weather conditions and forecasts.",
+    "nl": "Houd het weer en de vooruitzichten in de gaten."
   },
   "category": [
     "climate"
@@ -37,8 +37,8 @@
         "nl": "Nieuwe gegevens van het KNMI"
       },
       "hint": {
-        "en": "Quite a lot of variables received, current data and forecasts.",
-        "nl": "Best veel gegevens worden aangeleverd."
+        "en": "Quite a lot of variables received, current data and forecasts. All received data can be used in conditional and action cards.",
+        "nl": "Alle beschikbare gegevens van het KNMI worden ontsloten in variabelen die gebruikt kunnen worden in conditionele en actie kaarten."
       },
       "tokens": [
         {
