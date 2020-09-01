@@ -11,7 +11,7 @@ class KNMIDevice extends Homey.Device {
   }
 
   refresh() {
-    setTimeout(this.refresh, (10 * 60 * 1000)); // refresh is repeated after 10 minutes
+    setTimeout(this.refresh.bind(this), (10 * 60 * 1000)); // refresh is repeated after 10 minutes
 
     const lat = this.homey.geolocation.getLatitude();
     const lon = this.homey.geolocation.getLongitude();
