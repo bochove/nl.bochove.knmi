@@ -1,0 +1,24 @@
+<script>
+
+	Homey.setTitle(__('pair.start.title'));
+
+	Homey.on('errors', function(message, callback){
+		Homey.alert(message);
+		callback(null, 'ERROR');
+		Homey.done();
+	});
+
+	Homey.on('continue', function () {
+        Homey.addDevice({
+            name: 'KNMI weather',
+            data: {
+                id: 'HomeyLocation',
+            },
+        }, function( err, result ){
+            if( err ) return Homey.error(err);
+            console.log( result);
+        });
+		Homey.showView('list_devices');
+	});
+
+</script>

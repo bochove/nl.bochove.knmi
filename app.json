@@ -11,6 +11,22 @@
     "en": "Stay up to date on all weather conditions and forecasts.",
     "nl": "Houd het weer en de vooruitzichten in de gaten."
   },
+  "tags": {
+    "en": [
+      "Climate",
+      "Weather",
+      "Forecast",
+      "Temperature",
+      "Netherlands"
+    ],
+    "nl": [
+      "Klimaat",
+      "Weer",
+      "Weersverwachting",
+      "Temperatuur",
+      "Nederland"
+    ]
+  },
   "category": [
     "climate"
   ],
@@ -30,553 +46,1075 @@
     "url": "https://github.com/bochove/nl.bochove.knmi/issues"
   },
   "flow": {
-    "triggers": [{
-      "id": "received-new-data",
-      "title": {
-        "en": "Received new data from KNMI",
-        "nl": "Nieuwe gegevens van het KNMI"
+    "triggers": [
+      {
+        "id": "received-new-data",
+        "title": {
+          "en": "Received new data from KNMI",
+          "nl": "Nieuwe gegevens van het KNMI"
+        },
+        "hint": {
+          "en": "Quite a lot of variables received, current data and forecasts. All received data can be used in conditional and action cards.",
+          "nl": "Alle beschikbare gegevens van het KNMI worden ontsloten in variabelen die gebruikt kunnen worden in conditionele en actie kaarten."
+        },
+        "tokens": [
+          {
+            "name": "city",
+            "type": "string",
+            "title": {
+              "en": "City",
+              "nl": "Plaats"
+            },
+            "example": {
+              "en": "Location that the provided data is for.",
+              "nl": "De plaatsnaam waarop deze gegevens van toepassing zijn."
+            }
+          },
+          {
+            "name": "currentTemp",
+            "type": "number",
+            "title": {
+              "en": "Current temperature",
+              "nl": "Huidige temperatuur"
+            },
+            "example": {
+              "en": "32.1",
+              "nl": "32.1"
+            }
+          },
+          {
+            "name": "feelTemp",
+            "type": "number",
+            "title": {
+              "en": "Current feeling temperature",
+              "nl": "Huidige gevoels-temperatuur"
+            },
+            "example": {
+              "en": "32.1",
+              "nl": "32.1"
+            }
+          },
+          {
+            "name": "recap",
+            "type": "string",
+            "title": {
+              "en": "Recap",
+              "nl": "Weerbeeld"
+            },
+            "example": {
+              "en": "Cloudy",
+              "nl": "Bewolkt"
+            }
+          },
+          {
+            "name": "humidity",
+            "type": "number",
+            "title": {
+              "en": "Humidity",
+              "nl": "Luchtvochtigheid"
+            },
+            "example": {
+              "en": "90",
+              "nl": "90"
+            }
+          },
+          {
+            "name": "windDirection",
+            "type": "string",
+            "title": {
+              "en": "Wind direction",
+              "nl": "Windrichting"
+            },
+            "example": {
+              "en": "W",
+              "nl": "W"
+            }
+          },
+          {
+            "name": "windSpeedMS",
+            "type": "number",
+            "title": {
+              "en": "Wind speed MS",
+              "nl": "Windsnelheid MS"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "windForce",
+            "type": "number",
+            "title": {
+              "en": "Wind force",
+              "nl": "Windkracht"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "windSpeedKMH",
+            "type": "number",
+            "title": {
+              "en": "Wind speed KMH",
+              "nl": "Windsnelheid KMH"
+            },
+            "example": {
+              "en": "10",
+              "nl": "10"
+            }
+          },
+          {
+            "name": "airPressure",
+            "type": "number",
+            "title": {
+              "en": "Air pressure",
+              "nl": "Luchtdruk"
+            },
+            "example": {
+              "en": "1000",
+              "nl": "1000"
+            }
+          },
+          {
+            "name": "airPressureMMHG",
+            "type": "number",
+            "title": {
+              "en": "Air pressure MMHG",
+              "nl": "Luchtdruk MMHG"
+            },
+            "example": {
+              "en": "755",
+              "nl": "755"
+            }
+          },
+          {
+            "name": "dewPoint",
+            "type": "number",
+            "title": {
+              "en": "Dew point",
+              "nl": "Dauwpunt"
+            },
+            "example": {
+              "en": "11",
+              "nl": "11"
+            }
+          },
+          {
+            "name": "sight",
+            "type": "number",
+            "title": {
+              "en": "Sight",
+              "nl": "Zicht"
+            },
+            "example": {
+              "en": "11",
+              "nl": "11"
+            }
+          },
+          {
+            "name": "expected",
+            "type": "string",
+            "title": {
+              "en": "Expected",
+              "nl": "Verwachting"
+            },
+            "example": {
+              "en": "Cloudy",
+              "nl": "Bewolkt"
+            }
+          },
+          {
+            "name": "sunUp",
+            "type": "string",
+            "title": {
+              "en": "Sun up",
+              "nl": "Zonsopgang"
+            },
+            "example": {
+              "en": "06:54",
+              "nl": "06:54"
+            }
+          },
+          {
+            "name": "sunDown",
+            "type": "string",
+            "title": {
+              "en": "Sun down",
+              "nl": "Zonsondergang"
+            },
+            "example": {
+              "en": "21:15",
+              "nl": "21:15"
+            }
+          },
+          {
+            "name": "expectedTodayRecap",
+            "type": "string",
+            "title": {
+              "en": "Exp. recap today",
+              "nl": "Verw. weerbeeld vandaag"
+            },
+            "example": {
+              "en": "Sunny",
+              "nl": "Regen"
+            }
+          },
+          {
+            "name": "expectedTodayMaxTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. max temp todays",
+              "nl": "Verw. max. temperatuur"
+            },
+            "example": {
+              "en": "18",
+              "nl": "18"
+            }
+          },
+          {
+            "name": "expectedTodayMinTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. minimum temp today",
+              "nl": "Verw. min. temp."
+            },
+            "example": {
+              "en": "7",
+              "nl": "7"
+            }
+          },
+          {
+            "name": "expectedTodayWindForce",
+            "type": "number",
+            "title": {
+              "en": "Exp. windforce today",
+              "nl": "Verw. windkracht vandaag"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedTodayWindSpeedMS",
+            "type": "number",
+            "title": {
+              "en": "Exp. windspeed today MS",
+              "nl": "Verw. windkracht vandaag MS"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedTodayWindSpeedKMH",
+            "type": "number",
+            "title": {
+              "en": "Exp. windspeed today KMH",
+              "nl": "Verw. windkracht vandaag KMH"
+            },
+            "example": {
+              "en": "5",
+              "nl": "5"
+            }
+          },
+          {
+            "name": "expectedTodayWindDirection",
+            "type": "string",
+            "title": {
+              "en": "Exp. wind direction today",
+              "nl": "Verw. windrichting vandaag"
+            },
+            "example": {
+              "en": "W",
+              "nl": "W"
+            }
+          },
+          {
+            "name": "expectedTodayPrecipitation",
+            "type": "number",
+            "title": {
+              "en": "Exp. precipitation today",
+              "nl": "Verw. neerslag vandaag"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedTodaySunshine",
+            "type": "number",
+            "title": {
+              "en": "Exp. sunshine today",
+              "nl": "Verw. zonkans vandaag"
+            },
+            "example": {
+              "en": "55",
+              "nl": "55"
+            }
+          },
+          {
+            "name": "expectedTomorrowRecap",
+            "type": "string",
+            "title": {
+              "en": "Exp. recap tomorrow",
+              "nl": "Verw. weerbeeld morgen"
+            },
+            "example": {
+              "en": "Rainy",
+              "nl": "Bewolkt"
+            }
+          },
+          {
+            "name": "expectedTomorrowMaxTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. max temp tomorrow",
+              "nl": "Verw. max temp morgen"
+            },
+            "example": {
+              "en": "20",
+              "nl": "20"
+            }
+          },
+          {
+            "name": "expectedTomorrowMinTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. min temp tomorrow",
+              "nl": "Verw. min temp morgen"
+            },
+            "example": {
+              "en": "8",
+              "nl": "8"
+            }
+          },
+          {
+            "name": "expectedTomorrowWindForce",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind force tomorrow",
+              "nl": "Verw. windkracht morgen"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedTomorrowWindSpeedMS",
+            "type": "number",
+            "title": {
+              "en": "Exp. windspeed MS tomorrow",
+              "nl": "Verw. windsnelheid morgen MS"
+            },
+            "example": {
+              "en": "5",
+              "nl": "5"
+            }
+          },
+          {
+            "name": "expectedTomorrowWindSpeedKMH",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind speed tomorrow KMH",
+              "nl": "Verw, windsnelheid morgen KMH"
+            },
+            "example": {
+              "en": "10",
+              "nl": "10"
+            }
+          },
+          {
+            "name": "expectedTomorrowWindDirection",
+            "type": "string",
+            "title": {
+              "en": "Exp. wind direction tomorrow",
+              "nl": "Verw. windrichting morgen"
+            },
+            "example": {
+              "en": "W",
+              "nl": "W"
+            }
+          },
+          {
+            "name": "expectedTomorrowPrecipitation",
+            "type": "number",
+            "title": {
+              "en": "Exp.precipitation tomorrow",
+              "nl": "Verw. neerslag morgen"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedTomorrowSunshine",
+            "type": "number",
+            "title": {
+              "en": "Exp, sunshine tomorrow",
+              "nl": "Verw. zonkans morgen"
+            },
+            "example": {
+              "en": "55",
+              "nl": "55"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowRecap",
+            "type": "string",
+            "title": {
+              "en": "Exp. recap day after tomorrow",
+              "nl": "Verw. weerbeeld overmorgen"
+            },
+            "example": {
+              "en": "Cloudy",
+              "nl": "Bewolkt"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowMaxTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. max temp day after tomorrow",
+              "nl": "Verw. max temp  overmorgen"
+            },
+            "example": {
+              "en": "22",
+              "nl": "22"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowMinTemp",
+            "type": "number",
+            "title": {
+              "en": "Exp. min temp day after tomorrow",
+              "nl": "Verw. min temp overmorgen"
+            },
+            "example": {
+              "en": "8",
+              "nl": "8"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowWindForce",
+            "type": "number",
+            "title": {
+              "en": "Exp. windforce day after tomorrow",
+              "nl": "Verw. windkracht overmorgen"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowWindSpeedMS",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind speed MS day after tomorrow",
+              "nl": "Verw. windsnelheid MS overmorgen"
+            },
+            "example": {
+              "en": "5",
+              "nl": "5"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowWindSpeedKMH",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind speed KMH day after tomorrow",
+              "nl": "Verw. windsnelheid KMH overmorgen"
+            },
+            "example": {
+              "en": "5",
+              "nl": "5"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowWindDirection",
+            "type": "string",
+            "title": {
+              "en": "Exp. wind direction day after tomorrow",
+              "nl": "Verw. windrichting overmorgen"
+            },
+            "example": {
+              "en": "W",
+              "nl": "W"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowPrecipitation",
+            "type": "number",
+            "title": {
+              "en": "Exp. precipitation day after tomorrow",
+              "nl": "Verw. neerslag overmorgen"
+            },
+            "example": {
+              "en": "2",
+              "nl": "2"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowSunshine",
+            "type": "number",
+            "title": {
+              "en": "Exp. sunshine day after tomorrow",
+              "nl": "Verw. zonkans overmorgen"
+            },
+            "example": {
+              "en": "55",
+              "nl": "55"
+            }
+          },
+          {
+            "name": "currentWeatherAlarm",
+            "type": "string",
+            "title": {
+              "en": "Weather alarm",
+              "nl": "Weeralarm"
+            },
+            "example": {
+              "en": "Code orange",
+              "nl": "Code oranje"
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "fetch-new-data",
+        "title": {
+          "en": "Fetch new data",
+          "nl": "Haal nieuwe gegevens"
+        }
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "knmi",
+      "name": {
+        "en": "KNMI",
+        "nl": "KNMI"
       },
-      "hint": {
-        "en": "Quite a lot of variables received, current data and forecasts. All received data can be used in conditional and action cards.",
-        "nl": "Alle beschikbare gegevens van het KNMI worden ontsloten in variabelen die gebruikt kunnen worden in conditionele en actie kaarten."
+      "class": "other",
+      "capabilities": [
+        "city",
+        "currentTemp",
+        "feelTemp",
+        "recap",
+        "humidity",
+        "windDirection",
+        "windSpeedMS",
+        "windForce",
+        "windSpeedKMH",
+        "airPressure",
+        "airPressureMMHG",
+        "dewPoint",
+        "sight",
+        "expected",
+        "sunUp",
+        "sunDown",
+        "expectedTodayRecap",
+        "expectedTodayMaxTemp",
+        "expectedTodayMinTemp",
+        "expectedTodayWindForce",
+        "expectedTodayWindSpeedMS",
+        "expectedTodayWindSpeedKMH",
+        "expectedTodayWindDirection",
+        "expectedTodayPrecipitation",
+        "expectedTodaySunshine",
+        "expectedTomorrowRecap",
+        "expectedTomorrowMaxTemp",
+        "expectedTomorrowMinTemp",
+        "expectedTomorrowWindForce",
+        "expectedTomorrowWindSpeedMS",
+        "expectedTomorrowWindSpeedKMH",
+        "expectedTomorrowWindDirection",
+        "expectedTomorrowPrecipitation",
+        "expectedTomorrowSunshine",
+        "expectedDayAfterTomorrowRecap",
+        "expectedDayAfterTomorrowMaxTemp",
+        "expectedDayAfterTomorrowMinTemp",
+        "expectedDayAfterTomorrowWindForce",
+        "expectedDayAfterTomorrowWindSpeedMS",
+        "expectedDayAfterTomorrowWindSpeedKMH",
+        "expectedDayAfterTomorrowWindDirection",
+        "expectedDayAfterTomorrowPrecipitation",
+        "expectedDayAfterTomorrowSunshine",
+        "currentWeatherAlarm"
+      ],
+      "images": {
+        "large": "/drivers/knmi/assets/images/large.png",
+        "small": "/drivers/knmi/assets/images/small.png"
       },
-      "tokens": [
+      "pair": [
         {
-          "name": "city",
-          "type": "string",
-          "title": {
-            "en": "City",
-            "nl": "Plaats"
-          },
-          "example": {
-            "en": "Location that the provided data is for.",
-            "nl": "De plaatsnaam waarop deze gegevens van toepassing zijn."
+          "id": "start"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
           }
         },
         {
-          "name": "currentTemp",
-          "type": "number",
-          "title": {
-            "en": "Current temperature",
-            "nl": "Huidige temperatuur"
-          },
-          "example": {
-            "en": "32.1",
-            "nl": "32.1"
-          }
-        },
-        {
-          "name": "feelTemp",
-          "type": "number",
-          "title": {
-            "en": "Current feeling temperature",
-            "nl": "Huidige gevoels-temperatuur"
-          },
-          "example": {
-            "en": "32.1",
-            "nl": "32.1"
-          }
-        },
-        {
-          "name": "recap",
-          "type":"string",
-          "title": {
-            "en": "Recap",
-            "nl": "Verwachting"
-          },
-          "example": {
-            "en": "Cloudy",
-            "nl": "Bewolkt"
-          }
-        },
-        {
-          "name": "humidity",
-          "type": "number",
-          "title": {
-            "en": "Humidity",
-            "nl": "Luchtvochtigheid"
-          },
-          "example": {
-            "en": "90",
-            "nl": "90"
-          }
-        },
-        {
-          "name": "windDirection",
-          "type": "string",
-          "title": {
-            "en": "Wind direction",
-            "nl": "Windrichting"
-          },
-          "example": {
-            "en": "W",
-            "nl": "W"
-          }
-        },
-        {
-          "name": "windSpeedMS",
-          "type": "number",
-          "title": {
-            "en": "Wind speed MS",
-            "nl": "Windsnelheid MS"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "windForce",
-          "type": "number",
-          "title": {
-            "en": "Wind force",
-            "nl": "Windkracht"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "windSpeedKMH",
-          "type": "number",
-          "title": {
-            "en": "Wind speed KMH",
-            "nl": "Windsnelheid KMH"
-          },
-          "example": {
-            "en": "10",
-            "nl": "10"
-          }
-        },
-        {
-          "name": "airPressure",
-          "type": "number",
-          "title": {
-            "en": "Air pressure",
-            "nl": "Luchtdruk"
-          },
-          "example": {
-            "en": "1000",
-            "nl": "1000"
-          }
-        },
-        {
-          "name": "airPressureMMHG",
-          "type": "number",
-          "title": {
-            "en": "Air pressure MMHG",
-            "nl": "Luchtdruk MMHG"
-          },
-          "example": {
-            "en": "755",
-            "nl": "755"
-          }
-        },
-        {
-          "name": "dewPoint",
-          "type": "number",
-          "title": {
-            "en": "Dew point",
-            "nl": "Dauwpunt"
-          },
-          "example": {
-            "en": "11",
-            "nl": "11"
-          }
-        },
-        {
-          "name": "sight",
-          "type": "number",
-          "title": {
-            "en": "Sight",
-            "nl": "Zicht"
-          },
-          "example": {
-            "en": "11",
-            "nl": "11"
-          }
-        },
-        {
-          "name": "expected",
-          "type": "string",
-          "title": {
-            "en": "Expected",
-            "nl": "Verwachting"
-          },
-          "example": {
-            "en": "Cloudy",
-            "nl": "Bewolkt"
-          }
-        },
-        {
-          "name": "sunUp",
-          "type": "string",
-          "title": {
-            "en": "Sun up",
-            "nl": "Zonsopgang"
-          },
-          "example": {
-            "en": "06:54",
-            "nl": "06:54"
-          }
-        },
-        {
-          "name": "sunDown",
-          "type": "string",
-          "title": {
-            "en": "Sun down",
-            "nl": "Zonsondergang"
-          },
-          "example": {
-            "en": "21:15",
-            "nl": "21:15"
-          }
-        },
-        {
-          "name": "expectedTodayRecap",
-          "type": "string",
-          "title": {
-            "en": "Todays expectation",
-            "nl": "Verwachting vandaag"
-          },
-          "example": {
-            "en": "Sunny",
-            "nl": "Regen"
-          }
-        },
-        {
-          "name": "expectedTodayMaxTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. max temp todays",
-            "nl": "Verw. max. temperatuur"
-          },
-          "example": {
-            "en": "18",
-            "nl": "18"
-          }
-        },
-        {
-          "name": "expectedTodayMinTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. minimum temp today",
-            "nl": "Verw. min. temp."
-          },
-          "example": {
-            "en": "7",
-            "nl": "7"
-          }
-        },
-        {
-          "name": "expectedTodayWindForce",
-          "type": "number",
-          "title": {
-            "en": "Exp. windforce today",
-            "nl": "Verw. windkracht vandaag"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedTodayWindSpeedMS",
-          "type": "number",
-          "title": {
-            "en": "Exp. windspeed today MS",
-            "nl": "Verw. windkracht vandaag MS"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedTodayWindSpeedKMH",
-          "type": "number",
-          "title": {
-            "en": "Exp. windspeed today KMH",
-            "nl": "Verw. windkracht vandaag KMH"
-          },
-          "example": {
-            "en": "5",
-            "nl": "5"
-          }
-        },
-        {
-          "name": "expectedTodayWindDirection",
-          "type": "string",
-          "title": {
-            "en": "Exp. wind direction today",
-            "nl": "Verw. windrichting vandaag"
-          },
-          "example": {
-            "en": "W",
-            "nl": "W"
-          }
-        },
-        {
-          "name": "expectedTodayPrecipitation",
-          "type": "number",
-          "title": {
-            "en": "Exp. precipitation today",
-            "nl": "Verw. neerslag vandaag"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedTodaySunshine",
-          "type": "number",
-          "title": {
-            "en": "Exp. sunshine today",
-            "nl": "Verw. zonkans vandaag"
-          },
-          "example": {
-            "en": "55",
-            "nl": "55"
-          }
-        },
-        {
-          "name": "expectedTomorrowRecap",
-          "type": "string",
-          "title": {
-            "en": "Exp. recap tomorrow",
-            "nl": "Verwachting morgen"
-          },
-          "example": {
-            "en": "Rainy",
-            "nl": "Bewolkt"
-          }
-        },
-        {
-          "name": "expectedTomorrowMaxTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. max temp tomorrow",
-            "nl": "Verw. max temp morgen"
-          },
-          "example": {
-            "en": "20",
-            "nl": "20"
-          }
-        },
-        {
-          "name": "expectedTomorrowMinTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. min temp tomorrow",
-            "nl": "Verw. min temp morgen"
-          },
-          "example": {
-            "en": "8",
-            "nl": "8"
-          }
-        },
-        {
-          "name": "expectedTomorrowWindForce",
-          "type": "number",
-          "title": {
-            "en": "Exp. wind force tomorrow",
-            "nl": "Verw. windkracht morgen"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedTomorrowWindSpeedMS",
-          "type": "number",
-          "title": {
-            "en": "Exp. windspeed MS tomorrow",
-            "nl": "Verw. windsnelheid morgen MS"
-          },
-          "example": {
-            "en": "5",
-            "nl": "5"
-          }
-        },
-        {
-          "name": "expectedTomorrowWindSpeedKMH",
-          "type": "number",
-          "title": {
-            "en": "Exp. wind speed tomorrow KMH",
-            "nl": "Verw, windsnelheid morgen KMH"
-          },
-          "example": {
-            "en": "10",
-            "nl": "10"
-          }
-        },
-        {
-          "name": "expectedTomorrowWindDirection",
-          "type": "string",
-          "title": {
-            "en": "Exp. wind direction tomorrow",
-            "nl": "Verw. windrichting morgen"
-          },
-          "example": {
-            "en": "W",
-            "nl": "W"
-          }
-        },
-        {
-          "name": "expectedTomorrowPrecipitation",
-          "type": "number",
-          "title": {
-            "en": "Exp.precipitation tomorrow",
-            "nl": "Verw. neerslag morgen"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedTomorrowSunshine",
-          "type": "number",
-          "title": {
-            "en": "Exp, sunshine tomorrow",
-            "nl": "Verw. zonkans morgen"
-          },
-          "example": {
-            "en": "55",
-            "nl": "55"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowRecap",
-          "type": "string",
-          "title": {
-            "en": "Exp. recap day after tomorrow",
-            "nl": "Verwachting overmorgen"
-          },
-          "example": {
-            "en": "Cloudy",
-            "nl": "Bewolkt"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowMaxTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. max temp day after tomorrow",
-            "nl": "Verw. max temp  overmorgen"
-          },
-          "example": {
-            "en": "22",
-            "nl": "22"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowMinTemp",
-          "type": "number",
-          "title": {
-            "en": "Exp. min temp day after tomorrow",
-            "nl": "Verw. min temp overmorgen"
-          },
-          "example": {
-            "en": "8",
-            "nl": "8"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowWindForce",
-          "type": "number",
-          "title": {
-            "en": "Exp. windforce day after tomorrow",
-            "nl": "Verw. windkracht overmorgen"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowWindSpeedMS",
-          "type": "number",
-          "title": {
-            "en": "Exp. wind speed MS day after tomorrow",
-            "nl": "Verw. windsnelheid MS overmorgen"
-          },
-          "example": {
-            "en": "5",
-            "nl": "5"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowWindSpeedKMH",
-          "type": "number",
-          "title": {
-            "en": "Exp. wind speed KMH day after tomorrow",
-            "nl": "Verw. windsnelheid KMH overmorgen"
-          },
-          "example": {
-            "en": "5",
-            "nl": "5"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowWindDirection",
-          "type": "string",
-          "title": {
-            "en": "Exp. wind direction day after tomorrow",
-            "nl": "Verw. windrichting overmorgen"
-          },
-          "example": {
-            "en": "W",
-            "nl": "W"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowPrecipitation",
-          "type": "number",
-          "title": {
-            "en": "Exp. precipitation day after tomorrow",
-            "nl": "Verw. neerslag overmorgen"
-          },
-          "example": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "name": "expectedDayAfterTomorrowSunshine",
-          "type": "number",
-          "title": {
-            "en": "Exp. sunshine day after tomorrow",
-            "nl": "Verw. zonkans overmorgen"
-          },
-          "example": {
-            "en": "55",
-            "nl": "55"
-          }
-        },
-        {
-          "name": "currentWeatherAlarm",
-          "type": "string",
-          "title": {
-            "en": "Weather alarm",
-            "nl": "Weeralarm"
-          },
-          "example": {
-            "en": "Code orange",
-            "nl": "Code oranje"
-          }
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ]
-    }],
-    "actions": [{
-      "id": "fetch-new-data",
+    }
+  ],
+  "capabilities": {
+    "city": {
+      "type": "string",
       "title": {
-        "en": "Fetch new data",
-        "nl": "Haal nieuwe gegevens"
-      }
-    }]
+        "en": "city",
+        "nl": "Plaats"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "currentTemp": {
+      "type": "number",
+      "title": {
+        "en": "Current temperature",
+        "nl": "Huidige temperatuur"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "feelTemp": {
+      "type": "number",
+      "title": {
+        "en": "Feel temperature",
+        "nl": "Gevoelstemperatuur"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "recap": {
+      "type": "string",
+      "title": {
+        "en": "recap",
+        "nl": "Weerbeeld"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "humidity": {
+      "type": "number",
+      "title": {
+        "en": "Humidity",
+        "nl": "Luchtvochtigheid"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "windDirection": {
+      "type": "string",
+      "title": {
+        "en": "Wind direction",
+        "nl": "Windrichting"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "windSpeedMS": {
+      "type": "number",
+      "title": {
+        "en": "Wind speed MS",
+        "nl": "Windsnelheid MS"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "windForce": {
+      "type": "number",
+      "title": {
+        "en": "Wind force",
+        "nl": "Windkracht"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "windSpeedKMH": {
+      "type": "number",
+      "title": {
+        "en": "Wind speed KMH",
+        "nl": "Windsnelheid KMH"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "airPressure": {
+      "type": "number",
+      "title": {
+        "en": "Air pressure",
+        "nl": "Luchtdruk"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "airPressureMMHG": {
+      "type": "number",
+      "title": {
+        "en": "Air pressure MMHG",
+        "nl": "Luchtdruk MMHG"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "dewPoint": {
+      "type": "number",
+      "title": {
+        "en": "Dew point",
+        "nl": "Douwpunt"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "sight": {
+      "type": "number",
+      "title": {
+        "en": "Sight",
+        "nl": "Zicht"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expected": {
+      "type": "string",
+      "title": {
+        "en": "Expected",
+        "nl": "Verwachting"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "sunUp": {
+      "type": "string",
+      "title": {
+        "en": "Sun up",
+        "nl": "Zonsopgang"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "sunDown": {
+      "type": "string",
+      "title": {
+        "en": "Sun down",
+        "nl": "Zonsondergang"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayRecap": {
+      "type": "string",
+      "title": {
+        "en": "Exp. recap today",
+        "nl": "Verw. weerbeeld vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayMaxTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. max temp today",
+        "nl": "Verw. max temp vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayMinTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. min temp today",
+        "nl": "Verw. min temp vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayWindForce": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind force today",
+        "nl": "Verw. windkracht vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayWindSpeedMS": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed MS today",
+        "nl": "Verw. windsnelheid MS vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayWindSpeedKMH": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed KMH today",
+        "nl": "Verw. windsnelheid KMH vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayWindDirection": {
+      "type": "string",
+      "title": {
+        "en": "Exp. wind direction today",
+        "nl": "Verw. windrichting vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodayPrecipitation": {
+      "type": "number",
+      "title": {
+        "en": "Exp. precipitation today",
+        "nl": "Verw. neerslag vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTodaySunshine": {
+      "type": "number",
+      "title": {
+        "en": "Exp. sunshine today",
+        "nl": "Verw. zonkans vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowRecap": {
+      "type": "string",
+      "title": {
+        "en": "Exp. recap today",
+        "nl": "Verw. weerbeeld vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowMaxTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. max temp tomorrow",
+        "nl": "Verw. max temp morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowMinTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. min temp tomorrow",
+        "nl": "Verw. min temp morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowWindForce": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind force tomorrow",
+        "nl": "Verw. windkracht morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowWindSpeedMS": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed MS tomorrow",
+        "nl": "Verw. windsnelheid MS morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowWindSpeedKMH": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed KMH",
+        "nl": "Verw. windsnelheid KMH morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowWindDirection": {
+      "type": "string",
+      "title": {
+        "en": "Exp. wind direction tomorrow",
+        "nl": "Verw. windrichting morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowPrecipitation": {
+      "type": "number",
+      "title": {
+        "en": "Exp. precipitation tomorrow",
+        "nl": "Verw. neerslag morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedTomorrowSunshine": {
+      "type": "number",
+      "title": {
+        "en": "Exp. sunshine tomorrow",
+        "nl": "Verw. zonkans morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowRecap": {
+      "type": "string",
+      "title": {
+        "en": "Exp. recap day after tomorrow",
+        "nl": "Verw. weerbeeld overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowMaxTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. max temp day after tomorrow",
+        "nl": "Verw. max temp overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowMinTemp": {
+      "type": "number",
+      "title": {
+        "en": "Exp. min temp day after tomorrow",
+        "nl": "Verw. min temp overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowWindForce": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind force day after tomorrow",
+        "nl": "Verw. windkracht overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowWindSpeedMS": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed MS day after tomorrow",
+        "nl": "Verw. windsnelheid MS overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowWindSpeedKMH": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind speed KMH day after tomorrow",
+        "nl": "Verw. windsnelheid KMH overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowWindDirection": {
+      "type": "string",
+      "title": {
+        "en": "Exp. wind direction day after tomorrow",
+        "nl": "Verw. windrichting overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowPrecipitation": {
+      "type": "number",
+      "title": {
+        "en": "Exp. precipitation day after tomorrow",
+        "nl": "Verw. neerslag overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expectedDayAfterTomorrowSunshine": {
+      "type": "number",
+      "title": {
+        "en": "Exp. sunshine day after tomorrow",
+        "nl": "Verw. zonkans overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "currentWeatherAlarm": {
+      "type": "string",
+      "title": {
+        "en": "Weather alarm",
+        "nl": "Weeralarm"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    }
   }
 }

@@ -1,0 +1,11 @@
+{
+  "pair": {
+    "start": {
+      "title": "De API key wordt gecontroleerd..."
+    }
+  },
+  "settings": {
+    "title": "Weerlive api key",
+    "subtitle": "Deze applicatie heeft een werkende api sleutel voor weerlive.nl nodig, deze kun je hier gratis krijgen:home"
+  }
+}
