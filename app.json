@@ -45,6 +45,8 @@
   "bugs": {
     "url": "https://github.com/bochove/nl.bochove.knmi/issues"
   },
+  "brandColour": "#4000ff",
+  "source": "https://github.com/bochove/nl.bochove.knmi",
   "flow": {
     "triggers": [
       {
