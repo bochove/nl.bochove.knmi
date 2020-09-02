@@ -20,10 +20,6 @@ class KNMIDriver extends Homey.Driver {
   }
 
   async onPair(socket) {
-    this.log(socket);
-
-    // create the devices data property.
-
     const key = this.homey.settings.get('weerlive_api_key');
     if (!key) {
       socket.emit('errors', 'NO API key provided, go to general settings to change.', () => {
