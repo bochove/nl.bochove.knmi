@@ -591,528 +591,1101 @@
         ]
       },
       {
-        "id": "measure_current_temp_changed",
+        "id": "city_changed",
         "title": {
-          "en": "currentTemp changed",
-          "nl": "currentTemp is veranderd"
+          "en": "City changed",
+          "nl": "Plaats is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_feel_temp_changed",
+        "id": "recap_changed",
         "title": {
-          "en": "feelTemp changed",
-          "nl": "feelTemp is veranderd"
+          "en": "Recap changed",
+          "nl": "Weerbeeld is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_humidity_changed",
+        "id": "wind_direction_changed",
         "title": {
-          "en": "humidity changed",
-          "nl": "humidity is veranderd"
+          "en": "Wind direction changed",
+          "nl": "Windrichting is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_wind_speed_m_s_changed",
+        "id": "expected_changed",
         "title": {
-          "en": "windSpeedMS changed",
-          "nl": "windSpeedMS is veranderd"
+          "en": "Expected changed",
+          "nl": "Weersverwachting is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_wind_force_changed",
+        "id": "sun_up_changed",
         "title": {
-          "en": "windForce changed",
-          "nl": "windForce is veranderd"
+          "en": "Sun up changed",
+          "nl": "Zonsopgang is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_wind_speed_k_m_h_changed",
+        "id": "sun_down_changed",
         "title": {
-          "en": "windSpeedKMH changed",
-          "nl": "windSpeedKMH is veranderd"
+          "en": "Sun down changed",
+          "nl": "Zonsondergang is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_air_pressure_changed",
+        "id": "expected_today_recap_changed",
         "title": {
-          "en": "airPressure changed",
-          "nl": "airPressure is veranderd"
+          "en": "Exp. recap today changed",
+          "nl": "Verw. weerbeeld is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_air_pressure_m_m_h_g_changed",
+        "id": "expected_today_wind_direction_changed",
         "title": {
-          "en": "airPressureMMHG changed",
-          "nl": "airPressureMMHG is veranderd"
+          "en": "Exp. wind direction today changed",
+          "nl": "Verw. windrichting vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_dew_point_changed",
+        "id": "expected_tomorrow_recap_changed",
         "title": {
-          "en": "dewPoint changed",
-          "nl": "dewPoint is veranderd"
+          "en": "Exp. recap tomorrow changed",
+          "nl": "Verw. weerbeeld morgen is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_sight_changed",
+        "id": "expected_tomorrow_wind_direction_changed",
         "title": {
-          "en": "sight changed",
-          "nl": "sight is veranderd"
+          "en": "Exp. wind direction tomorrow changed",
+          "nl": "Verw. windrichting morgen is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_max_temp_changed",
+        "id": "expected_day_after_tomorrow_recap_changed",
         "title": {
-          "en": "expectedTodayMaxTemp changed",
-          "nl": "expectedTodayMaxTemp is veranderd"
+          "en": "Exp. recap day after tomorrow changed",
+          "nl": "Verw. weerbeeld overmorgen is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_min_temp_changed",
+        "id": "expected_day_after_tomorrow_wind_direction_changed",
         "title": {
-          "en": "expectedTodayMinTemp changed",
-          "nl": "expectedTodayMinTemp is veranderd"
+          "en": "Exp. wind direction day after tomorrow changed",
+          "nl": "Verw. windrichting overmorgen is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_wind_force_changed",
+        "id": "current_weather_alarm_changed",
         "title": {
-          "en": "expectedTodayWindForce changed",
-          "nl": "expectedTodayWindForce is veranderd"
+          "en": "Weather alarm changed",
+          "nl": "Weeralarm is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
-            "type": "number",
+            "name": "new_value",
+            "type": "string",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_wind_speed_m_s_changed",
+        "id": "current_temp_changed",
         "title": {
-          "en": "expectedTodayWindSpeedMS changed",
-          "nl": "expectedTodayWindSpeedMS is veranderd"
+          "en": "current temp changed",
+          "nl": "Huidige temp is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_wind_speed_k_m_h_changed",
+        "id": "feel_temp_changed",
         "title": {
-          "en": "expectedTodayWindSpeedKMH changed",
-          "nl": "expectedTodayWindSpeedKMH is veranderd"
+          "en": "feel temp changed",
+          "nl": "Gevoelstemperatuur is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_precipitation_changed",
+        "id": "humidity_changed",
         "title": {
-          "en": "expectedTodayPrecipitation changed",
-          "nl": "expectedTodayPrecipitation is veranderd"
+          "en": "Humidity changed",
+          "nl": "Luchtvochtigheid is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_today_sunshine_changed",
+        "id": "wind_speed_m_s_changed",
         "title": {
-          "en": "expectedTodaySunshine changed",
-          "nl": "expectedTodaySunshine is veranderd"
+          "en": "Wind speedMS changed",
+          "nl": "Windsnelheid MS is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_max_temp_changed",
+        "id": "wind_force_changed",
         "title": {
-          "en": "expectedTomorrowMaxTemp changed",
-          "nl": "expectedTomorrowMaxTemp is veranderd"
+          "en": "wind force changed",
+          "nl": "Windkracht is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_min_temp_changed",
+        "id": "wind_speed_k_m_h_changed",
         "title": {
-          "en": "expectedTomorrowMinTemp changed",
-          "nl": "expectedTomorrowMinTemp is veranderd"
+          "en": "Wind speed KMH changed",
+          "nl": "Windsnelheid KMH is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_wind_force_changed",
+        "id": "air_pressure_changed",
         "title": {
-          "en": "expectedTomorrowWindForce changed",
-          "nl": "expectedTomorrowWindForce is veranderd"
+          "en": "Air pressure changed",
+          "nl": "Luchtdruk is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_wind_speed_m_s_changed",
+        "id": "air_pressure_m_m_h_g_changed",
         "title": {
-          "en": "expectedTomorrowWindSpeedMS changed",
-          "nl": "expectedTomorrowWindSpeedMS is veranderd"
+          "en": "Air pressure MMHG changed",
+          "nl": "Luchtdruk MMHG is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_wind_speed_k_m_h_changed",
+        "id": "dew_point_changed",
         "title": {
-          "en": "expectedTomorrowWindSpeedKMH changed",
-          "nl": "expectedTomorrowWindSpeedKMH is veranderd"
+          "en": "Dew point changed",
+          "nl": "Dauwpunt is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_precipitation_changed",
+        "id": "sight_changed",
         "title": {
-          "en": "expectedTomorrowPrecipitation changed",
-          "nl": "expectedTomorrowPrecipitation is veranderd"
+          "en": "Sight changed",
+          "nl": "Zicht is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_tomorrow_sunshine_changed",
+        "id": "expected_today_max_temp_changed",
         "title": {
-          "en": "expectedTomorrowSunshine changed",
-          "nl": "expectedTomorrowSunshine is veranderd"
+          "en": "Exp. max temp today changed",
+          "nl": "Verw. max temp vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_max_temp_changed",
+        "id": "expected_today_min_temp_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowMaxTemp changed",
-          "nl": "expectedDayAfterTomorrowMaxTemp is veranderd"
+          "en": "Exp. min temp today changed",
+          "nl": "Verw. min temp vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_min_temp_changed",
+        "id": "expected_today_wind_force_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowMinTemp changed",
-          "nl": "expectedDayAfterTomorrowMinTemp is veranderd"
+          "en": "Exp. wind force today changed",
+          "nl": "Verw. windkracht vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_wind_force_changed",
+        "id": "expected_today_wind_speed_m_s_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowWindForce changed",
-          "nl": "expectedDayAfterTomorrowWindForce is veranderd"
+          "en": "Exp. wind speed MS today changed",
+          "nl": "Verw. windsnelheid MS vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_wind_speed_m_s_changed",
+        "id": "expected_today_wind_speed_k_m_h_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowWindSpeedMS changed",
-          "nl": "expectedDayAfterTomorrowWindSpeedMS is veranderd"
+          "en": "Exp. wind speed KMH today changed",
+          "nl": "Verw. windsnelheid KMH vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_wind_speed_k_m_h_changed",
+        "id": "expected_today_precipitation_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowWindSpeedKMH changed",
-          "nl": "expectedDayAfterTomorrowWindSpeedKMH is veranderd"
+          "en": "Exp. precipitation today changed",
+          "nl": "Verw. neerslag vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_precipitation_changed",
+        "id": "expected_today_sunshine_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowPrecipitation changed",
-          "nl": "expectedDayAfterTomorrowPrecipitation is veranderd"
+          "en": "Exp. sunshine today changed",
+          "nl": "Verw. zonkans vandaag is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ]
       },
       {
-        "id": "measure_expected_day_after_tomorrow_sunshine_changed",
+        "id": "expected_tomorrow_max_temp_changed",
         "title": {
-          "en": "expectedDayAfterTomorrowSunshine changed",
-          "nl": "expectedDayAfterTomorrowSunshine is veranderd"
+          "en": "Exp. max temp tomorrow changed",
+          "nl": "Verw. max temp morgen is veranderd"
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "new_value",
             "type": "number",
             "title": {
-              "en": "Value",
+              "en": "New value",
               "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_min_temp_changed",
+        "title": {
+          "en": "Exp. min temp tomorrow changed",
+          "nl": "Verw. min temp morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_wind_force_changed",
+        "title": {
+          "en": "Exp. wind force tomorrow changed",
+          "nl": "Verw. windkracht morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_wind_speed_m_s_changed",
+        "title": {
+          "en": "Exp. wind speed MS tomorrow changed",
+          "nl": "Verw. windsnelheid MS morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_wind_speed_k_m_h_changed",
+        "title": {
+          "en": "Exp. wind speed KMH tomorrow changed",
+          "nl": "Verw. windsnelheid KMH morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_precipitation_changed",
+        "title": {
+          "en": "Exp. precipitation tomorrow changed",
+          "nl": "Verw. neerslag morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_tomorrow_sunshine_changed",
+        "title": {
+          "en": "Exp. sunshine tomorrow changed",
+          "nl": "Verw. zonkans morgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_max_temp_changed",
+        "title": {
+          "en": "Exp. max temp day after tomorrow changed",
+          "nl": "Verw. min temp overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_min_temp_changed",
+        "title": {
+          "en": "Exp. min temp day after tomorrow changed",
+          "nl": "Verw. min temp overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_wind_force_changed",
+        "title": {
+          "en": "Exp. wind force day after tomorrow changed",
+          "nl": "Verw. windkracht overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_wind_speed_m_s_changed",
+        "title": {
+          "en": "Exp. wind speed MS day after tomorrow changed",
+          "nl": "Verw. windsnelheid MS overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_wind_speed_k_m_h_changed",
+        "title": {
+          "en": "Exp. wind speed KMH day after tomorrow changed",
+          "nl": "Verw. windsnelheid KMH overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_precipitation_changed",
+        "title": {
+          "en": "Exp. precipitation day after tomorrow changed",
+          "nl": "Verw. neerslag overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_sunshine_changed",
+        "title": {
+          "en": "Exp. sunshine day after tomorrow changed",
+          "nl": "Verw. zonkans overmorgen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
             }
           }
         ],
@@ -1147,49 +1720,49 @@
       "class": "other",
       "capabilities": [
         "city",
-        "measure_current_temp",
-        "measure_feel_temp",
+        "current_temp",
+        "feel_temp",
         "recap",
-        "measure_humidity",
-        "windDirection",
-        "measure_wind_speed_m_s",
-        "measure_wind_force",
-        "measure_wind_speed_k_m_h",
-        "measure_air_pressure",
-        "measure_air_pressure_m_m_h_g",
-        "measure_dew_point",
-        "measure_sight",
+        "humidity",
+        "wind_direction",
+        "wind_speed_m_s",
+        "wind_force",
+        "wind_speed_k_m_h",
+        "air_pressure",
+        "air_pressure_m_m_h_g",
+        "dew_point",
+        "sight",
         "expected",
-        "sunUp",
-        "sunDown",
-        "expectedTodayRecap",
-        "measure_expected_today_max_temp",
-        "measure_expected_today_min_temp",
-        "measure_expected_today_wind_force",
-        "measure_expected_today_wind_speed_m_s",
-        "measure_expected_today_wind_speed_k_m_h",
-        "expectedTodayWindDirection",
-        "measure_expected_today_precipitation",
-        "measure_expected_today_sunshine",
-        "expectedTomorrowRecap",
-        "measure_expected_tomorrow_max_temp",
-        "measure_expected_tomorrow_min_temp",
-        "measure_expected_tomorrow_wind_force",
-        "measure_expected_tomorrow_wind_speed_m_s",
-        "measure_expected_tomorrow_wind_speed_k_m_h",
-        "expectedTomorrowWindDirection",
-        "measure_expected_tomorrow_precipitation",
-        "measure_expected_tomorrow_sunshine",
-        "expectedDayAfterTomorrowRecap",
-        "measure_expected_day_after_tomorrow_max_temp",
-        "measure_expected_day_after_tomorrow_min_temp",
-        "measure_expected_day_after_tomorrow_wind_force",
-        "measure_expected_day_after_tomorrow_wind_speed_m_s",
-        "measure_expected_day_after_tomorrow_wind_speed_k_m_h",
-        "expectedDayAfterTomorrowWindDirection",
-        "measure_expected_day_after_tomorrow_precipitation",
-        "measure_expected_day_after_tomorrow_sunshine",
-        "currentWeatherAlarm"
+        "sun_up",
+        "sun_down",
+        "expected_today_recap",
+        "expected_today_max_temp",
+        "expected_today_min_temp",
+        "expected_today_wind_force",
+        "expected_today_wind_speed_m_s",
+        "expected_today_wind_speed_k_m_h",
+        "expected_today_wind_direction",
+        "expected_today_precipitation",
+        "expected_today_sunshine",
+        "expected_tomorrow_recap",
+        "expected_tomorrow_max_temp",
+        "expected_tomorrow_min_temp",
+        "expected_tomorrow_wind_force",
+        "expected_tomorrow_wind_speed_m_s",
+        "expected_tomorrow_wind_speed_k_m_h",
+        "expected_tomorrow_wind_direction",
+        "expected_tomorrow_precipitation",
+        "expected_tomorrow_sunshine",
+        "expected_day_after_tomorrow_recap",
+        "expected_day_after_tomorrow_max_temp",
+        "expected_day_after_tomorrow_min_temp",
+        "expected_day_after_tomorrow_wind_force",
+        "expected_day_after_tomorrow_wind_speed_m_s",
+        "expected_day_after_tomorrow_wind_speed_k_m_h",
+        "expected_day_after_tomorrow_wind_direction",
+        "expected_day_after_tomorrow_precipitation",
+        "expected_day_after_tomorrow_sunshine",
+        "current_weather_alarm"
       ],
       "images": {
         "large": "/drivers/knmi/assets/images/large.png",
@@ -1224,7 +1797,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_current_temp": {
+    "current_temp": {
       "type": "number",
       "title": {
         "en": "Current temperature",
@@ -1234,7 +1807,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_feel_temp": {
+    "feel_temp": {
       "type": "number",
       "title": {
         "en": "Feel temperature",
@@ -1254,7 +1827,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_humidity": {
+    "humidity": {
       "type": "number",
       "title": {
         "en": "Humidity",
@@ -1264,7 +1837,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "windDirection": {
+    "wind_direction": {
       "type": "string",
       "title": {
         "en": "Wind direction",
@@ -1274,7 +1847,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_wind_speed_m_s": {
+    "wind_speed_m_s": {
       "type": "number",
       "title": {
         "en": "Wind speed MS",
@@ -1284,7 +1857,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_wind_force": {
+    "wind_force": {
       "type": "number",
       "title": {
         "en": "Wind force",
@@ -1294,7 +1867,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_wind_speed_k_m_h": {
+    "wind_speed_k_m_h": {
       "type": "number",
       "title": {
         "en": "Wind speed KMH",
@@ -1304,7 +1877,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_air_pressure": {
+    "air_pressure": {
       "type": "number",
       "title": {
         "en": "Air pressure",
@@ -1314,7 +1887,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_air_pressure_m_m_h_g": {
+    "air_pressure_m_m_h_g": {
       "type": "number",
       "title": {
         "en": "Air pressure MMHG",
@@ -1324,7 +1897,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_dew_point": {
+    "dew_point": {
       "type": "number",
       "title": {
         "en": "Dew point",
@@ -1334,7 +1907,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_sight": {
+    "sight": {
       "type": "number",
       "title": {
         "en": "Sight",
@@ -1354,7 +1927,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "sunUp": {
+    "sun_up": {
       "type": "string",
       "title": {
         "en": "Sun up",
@@ -1364,7 +1937,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "sunDown": {
+    "sun_down": {
       "type": "string",
       "title": {
         "en": "Sun down",
@@ -1374,7 +1947,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedTodayRecap": {
+    "expected_today_recap": {
       "type": "string",
       "title": {
         "en": "Exp. recap today",
@@ -1384,7 +1957,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_max_temp": {
+    "expected_today_max_temp": {
       "type": "number",
       "title": {
         "en": "Exp. max temp today",
@@ -1394,7 +1967,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_min_temp": {
+    "expected_today_min_temp": {
       "type": "number",
       "title": {
         "en": "Exp. min temp today",
@@ -1404,7 +1977,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_wind_force": {
+    "expected_today_wind_force": {
       "type": "number",
       "title": {
         "en": "Exp. wind force today",
@@ -1414,7 +1987,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_wind_speed_m_s": {
+    "expected_today_wind_speed_m_s": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed MS today",
@@ -1424,7 +1997,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_wind_speed_k_m_h": {
+    "expected_today_wind_speed_k_m_h": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed KMH today",
@@ -1434,7 +2007,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedTodayWindDirection": {
+    "expected_today_wind_direction": {
       "type": "string",
       "title": {
         "en": "Exp. wind direction today",
@@ -1444,7 +2017,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_precipitation": {
+    "expected_today_precipitation": {
       "type": "number",
       "title": {
         "en": "Exp. precipitation today",
@@ -1454,7 +2027,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_today_sunshine": {
+    "expected_today_sunshine": {
       "type": "number",
       "title": {
         "en": "Exp. sunshine today",
@@ -1464,7 +2037,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedTomorrowRecap": {
+    "expected_tomorrow_recap": {
       "type": "string",
       "title": {
         "en": "Exp. recap today",
@@ -1474,7 +2047,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_max_temp": {
+    "expected_tomorrow_max_temp": {
       "type": "number",
       "title": {
         "en": "Exp. max temp tomorrow",
@@ -1484,7 +2057,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_min_temp": {
+    "expected_tomorrow_min_temp": {
       "type": "number",
       "title": {
         "en": "Exp. min temp tomorrow",
@@ -1494,7 +2067,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_wind_force": {
+    "expected_tomorrow_wind_force": {
       "type": "number",
       "title": {
         "en": "Exp. wind force tomorrow",
@@ -1504,7 +2077,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_wind_speed_m_s": {
+    "expected_tomorrow_wind_speed_m_s": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed MS tomorrow",
@@ -1514,7 +2087,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_wind_speed_k_m_h": {
+    "expected_tomorrow_wind_speed_k_m_h": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed KMH",
@@ -1524,7 +2097,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedTomorrowWindDirection": {
+    "expected_tomorrow_wind_direction": {
       "type": "string",
       "title": {
         "en": "Exp. wind direction tomorrow",
@@ -1534,7 +2107,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_precipitation": {
+    "expected_tomorrow_precipitation": {
       "type": "number",
       "title": {
         "en": "Exp. precipitation tomorrow",
@@ -1544,7 +2117,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_tomorrow_sunshine": {
+    "expected_tomorrow_sunshine": {
       "type": "number",
       "title": {
         "en": "Exp. sunshine tomorrow",
@@ -1554,7 +2127,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedDayAfterTomorrowRecap": {
+    "expected_day_after_tomorrow_recap": {
       "type": "string",
       "title": {
         "en": "Exp. recap day after tomorrow",
@@ -1564,7 +2137,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_max_temp": {
+    "expected_day_after_tomorrow_max_temp": {
       "type": "number",
       "title": {
         "en": "Exp. max temp day after tomorrow",
@@ -1574,7 +2147,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_min_temp": {
+    "expected_day_after_tomorrow_min_temp": {
       "type": "number",
       "title": {
         "en": "Exp. min temp day after tomorrow",
@@ -1584,7 +2157,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_wind_force": {
+    "expected_day_after_tomorrow_wind_force": {
       "type": "number",
       "title": {
         "en": "Exp. wind force day after tomorrow",
@@ -1594,7 +2167,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_wind_speed_m_s": {
+    "expected_day_after_tomorrow_wind_speed_m_s": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed MS day after tomorrow",
@@ -1604,7 +2177,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_wind_speed_k_m_h": {
+    "expected_day_after_tomorrow_wind_speed_k_m_h": {
       "type": "number",
       "title": {
         "en": "Exp. wind speed KMH day after tomorrow",
@@ -1614,7 +2187,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "expectedDayAfterTomorrowWindDirection": {
+    "expected_day_after_tomorrow_wind_direction": {
       "type": "string",
       "title": {
         "en": "Exp. wind direction day after tomorrow",
@@ -1624,7 +2197,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_precipitation": {
+    "expected_day_after_tomorrow_precipitation": {
       "type": "number",
       "title": {
         "en": "Exp. precipitation day after tomorrow",
@@ -1634,7 +2207,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "measure_expected_day_after_tomorrow_sunshine": {
+    "expected_day_after_tomorrow_sunshine": {
       "type": "number",
       "title": {
         "en": "Exp. sunshine day after tomorrow",
@@ -1644,7 +2217,7 @@
       "setable": false,
       "uiComponent": "sensor"
     },
-    "currentWeatherAlarm": {
+    "current_weather_alarm": {
       "type": "string",
       "title": {
         "en": "Weather alarm",

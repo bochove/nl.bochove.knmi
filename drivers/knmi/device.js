@@ -6,9 +6,66 @@ const fetch = require('node-fetch');
 class KNMIDevice extends Homey.Device {
 
     timer;
+    triggers = {};
 
     onInit() {
       this.log('MyDevice has been inited');
+
+      // init all the triggers
+      const triggersToRegister = [
+        'city',
+        'currentTemp',
+        'feelTemp',
+        'recap',
+        'humidity',
+        'windDirection',
+        'windSpeedMS',
+        'windForce',
+        'windSpeedKMH',
+        'airPressure',
+        'airPressureMMHG',
+        'dewPoint',
+        'sight',
+        'expected',
+        'sunUp',
+        'sunDown',
+        'expectedTodayRecap',
+        'expectedTodayMaxTemp',
+        'expectedTodayMinTemp',
+        'expectedTodayWindForce',
+        'expectedTodayWindSpeedMS',
+        'expectedTodayWindSpeedKMH',
+        'expectedTodayWindDirection',
+        'expectedTodayPrecipitation',
+        'expectedTodaySunshine',
+        'expectedTomorrowRecap',
+        'expectedTomorrowMaxTemp',
+        'expectedTomorrowMinTemp',
+        'expectedTomorrowWindForce',
+        'expectedTomorrowWindSpeedMS',
+        'expectedTomorrowWindSpeedKMH',
+        'expectedTomorrowWindDirection',
+        'expectedTomorrowPrecipitation',
+        'expectedTomorrowSunshine',
+        'expectedDayAfterTomorrowRecap',
+        'expectedDayAfterTomorrowMaxTemp',
+        'expectedDayAfterTomorrowMinTemp',
+        'expectedDayAfterTomorrowWindForce',
+        'expectedDayAfterTomorrowWindSpeedMS',
+        'expectedDayAfterTomorrowWindSpeedKMH',
+        'expectedDayAfterTomorrowWindDirection',
+        'expectedDayAfterTomorrowPrecipitation',
+        'expectedDayAfterTomorrowSunshine',
+        'currentWeatherAlarm',
+      ];
+
+      triggersToRegister.forEach(trigger => {
+        this.triggers[trigger] = this.homey.flow.getTriggerCard(
+          // eslint-disable-next-line prefer-template
+          trigger.replace(/([A-Z])/g, match => `_${match.toLowerCase()}`) + '_changed',
+        );
+      });
+
       this.refresh();
     }
 
@@ -92,20 +149,20 @@ class KNMIDevice extends Homey.Device {
     }
 
     setCapability(capability, value) {
-      if (typeof value !== 'string') {
-        // convert the capability to snake case, as that allows us to automatically trigger
-        // the changed triggers
-        capability = `measure_${capability}`; // this way a value changed trigger will be fired automatically.
-        capability = capability.replace(/([A-Z])/g, match => `_${match.toLowerCase()}`);
-      }
+      const deviceCapability = capability.replace(/([A-Z])/g, match => `_${match.toLowerCase()}`);
 
-      if (this.hasCapability(capability)) {
-        const currentValue = this.getCapabilityValue(capability);
+      if (this.hasCapability(deviceCapability)) {
+        const currentValue = this.getCapabilityValue(deviceCapability);
         if (currentValue !== value) {
-          this.setCapabilityValue(capability, value).catch(err => this.log(`Could not set ${capability} to ${value}, of type ${typeof value}`, err));
+          this.setCapabilityValue(deviceCapability, value).catch(err => this.log(`Could not set ${capability} to ${value}, of type ${typeof value}`, err));
+          if (!this.triggers[capability]) {
+            this.log(`could not find the trigger for ${capability}`);
+          } else {
+            this.triggers[capability].trigger({ new_value: value, old_value: currentValue });
+          }
         }
       } else {
-        this.log(`Tried to set ${capability}, but no such capability found.`);
+        this.log(`Tried to set ${deviceCapability}, but no such capability found.`);
       }
     }
 
