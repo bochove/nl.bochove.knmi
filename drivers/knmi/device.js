@@ -8,6 +8,7 @@ class KNMIDevice extends Homey.Device {
     timer;
     triggers = {};
 
+    // noinspection JSUnusedGlobalSymbols
     onInit() {
       this.log('MyDevice has been inited');
 
@@ -60,11 +61,38 @@ class KNMIDevice extends Homey.Device {
       ];
 
       triggersToRegister.forEach(trigger => {
-        this.triggers[trigger] = this.homey.flow.getTriggerCard(
+        this.triggers[trigger] = this.homey.flow.getDeviceTriggerCard(
           // eslint-disable-next-line prefer-template
           trigger.replace(/([A-Z])/g, match => `_${match.toLowerCase()}`) + '_changed',
         );
       });
+
+      const slightlyCloudyOrClearCondition = this.homey.flow.getConditionCard('slightly_cloudy_or_clear');
+      slightlyCloudyOrClearCondition
+        .registerRunListener(async args => {
+          // noinspection JSUnresolvedVariable
+          if (!args || !args.when) {
+            return false;
+          }
+          let weather;
+          switch (args.when) {
+            case 'now':
+              weather = this.getCapabilityValue('recap');
+              break;
+            case 'expected_today':
+              weather = this.getCapabilityValue('expected_today_recap');
+              break;
+            case 'expected_tomorrow':
+              weather = this.getCapabilityValue('expected_tomorrow_recap');
+              break;
+            case 'expected_day_after_tomorrow':
+              weather = this.getCapabilityValue('expected_day_after_tomorrow_recap');
+              break;
+            default:
+              weather = '';
+          }
+          return weather === 'onbewolkt' || weather === 'licht bewolkt'; // Promise<boolean>
+        });
 
       this.refresh();
     }
@@ -101,7 +129,7 @@ class KNMIDevice extends Homey.Device {
           this.setCapability('city', res.plaats ? res.plaats : '');
           this.setCapability('currentTemp', parseFloat(res.temp) ? parseFloat(res.temp) : 0);
           this.setCapability('feelTemp', parseFloat(res.gtemp) ? parseFloat(res.gtemp) : 0);
-          this.setCapability('recap', res.samenv ? res.samenv : '');
+          this.setCapability('recap', res.samenv ? res.samenv.toLowerCase() : '');
           this.setCapability('humidity', parseFloat(res.lv) ? parseFloat(res.lv) : 0);
           this.setCapability('windDirection', res.windr ? res.windr : '');
           this.setCapability('windSpeedMS', parseFloat(res.windms) ? parseFloat(res.windms) : 0);
@@ -114,7 +142,7 @@ class KNMIDevice extends Homey.Device {
           this.setCapability('expected', res.verw ? res.verw : '');
           this.setCapability('sunUp', res.sup ? res.sup : '');
           this.setCapability('sunDown', res.sunder ? res.sunder : '');
-          this.setCapability('expectedTodayRecap', res.d0weer ? res.d0weer : '');
+          this.setCapability('expectedTodayRecap', res.d0weer ? res.d0weer.toLowerCase() : '');
           this.setCapability('expectedTodayMaxTemp', parseFloat(res.d0tmax) ? parseFloat(res.d0tmax) : 0);
           this.setCapability('expectedTodayMinTemp', parseFloat(res.d0tmin) ? parseFloat(res.d0tmin) : 0);
           this.setCapability('expectedTodayWindForce', parseFloat(res.d0windk) ? parseFloat(res.d0windk) : 0);
@@ -123,7 +151,7 @@ class KNMIDevice extends Homey.Device {
           this.setCapability('expectedTodayWindDirection', res.d0windr ? res.d0windr : '');
           this.setCapability('expectedTodayPrecipitation', parseFloat(res.d0neerslag) ? parseFloat(res.d0neerslag) : 0);
           this.setCapability('expectedTodaySunshine', parseFloat(res.d0zon) ? parseFloat(res.d0zon) : 0);
-          this.setCapability('expectedTomorrowRecap', res.d1weer ? res.d1weer : '');
+          this.setCapability('expectedTomorrowRecap', res.d1weer ? res.d1weer.toLowerCase() : '');
           this.setCapability('expectedTomorrowMaxTemp', parseFloat(res.d1tmax) ? parseFloat(res.d1tmax) : 0);
           this.setCapability('expectedTomorrowMinTemp', parseFloat(res.d1tmin) ? parseFloat(res.d1tmin) : 0);
           this.setCapability('expectedTomorrowWindForce', parseFloat(res.d1windk) ? parseFloat(res.d1windk) : 0);
@@ -132,7 +160,7 @@ class KNMIDevice extends Homey.Device {
           this.setCapability('expectedTomorrowWindDirection', res.d1windr ? res.d1windr : '');
           this.setCapability('expectedTomorrowPrecipitation', parseFloat(res.d1neerslag) ? parseFloat(res.d1neerslag) : 0);
           this.setCapability('expectedTomorrowSunshine', parseFloat(res.d1zon) ? parseFloat(res.d1zon) : 0);
-          this.setCapability('expectedDayAfterTomorrowRecap', res.d2weer ? res.d2weer : '');
+          this.setCapability('expectedDayAfterTomorrowRecap', res.d2weer ? res.d2weer.toLowerCase() : '');
           this.setCapability('expectedDayAfterTomorrowMaxTemp', parseFloat(res.d2tmax) ? parseFloat(res.d2tmax) : 0);
           this.setCapability('expectedDayAfterTomorrowMinTemp', parseFloat(res.d2tmin) ? parseFloat(res.d2tmin) : 0);
           this.setCapability('expectedDayAfterTomorrowWindForce', parseFloat(res.d2windk) ? parseFloat(res.d2windk) : 0);
@@ -158,7 +186,9 @@ class KNMIDevice extends Homey.Device {
           if (!this.triggers[capability]) {
             this.log(`could not find the trigger for ${capability}`);
           } else {
-            this.triggers[capability].trigger({ new_value: value, old_value: currentValue });
+            this.triggers[capability].trigger({ new_value: value, old_value: currentValue }).catch(err => {
+              this.log(this.triggers[capability].id, err);
+            }).then(() => this.log(`fired trigger: ${this.triggers[capability].id}`));
           }
         }
       } else {
@@ -166,6 +196,7 @@ class KNMIDevice extends Homey.Device {
       }
     }
 
+    // noinspection JSUnusedGlobalSymbols
     onDeleted() {
       if (this.timer) {
         clearTimeout(this.timer);

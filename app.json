@@ -1,6 +1,6 @@
 {
   "id": "nl.bochove.knmi",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -596,6 +596,13 @@
           "en": "City changed",
           "nl": "Plaats is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -621,6 +628,13 @@
           "en": "Recap changed",
           "nl": "Weerbeeld is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -646,6 +660,13 @@
           "en": "Wind direction changed",
           "nl": "Windrichting is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -671,6 +692,13 @@
           "en": "Expected changed",
           "nl": "Weersverwachting is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -696,6 +724,13 @@
           "en": "Sun up changed",
           "nl": "Zonsopgang is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -721,6 +756,13 @@
           "en": "Sun down changed",
           "nl": "Zonsondergang is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -746,6 +788,13 @@
           "en": "Exp. recap today changed",
           "nl": "Verw. weerbeeld is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -771,6 +820,13 @@
           "en": "Exp. wind direction today changed",
           "nl": "Verw. windrichting vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -796,6 +852,13 @@
           "en": "Exp. recap tomorrow changed",
           "nl": "Verw. weerbeeld morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -821,6 +884,13 @@
           "en": "Exp. wind direction tomorrow changed",
           "nl": "Verw. windrichting morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -846,6 +916,13 @@
           "en": "Exp. recap day after tomorrow changed",
           "nl": "Verw. weerbeeld overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -871,6 +948,13 @@
           "en": "Exp. wind direction day after tomorrow changed",
           "nl": "Verw. windrichting overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -896,6 +980,13 @@
           "en": "Weather alarm changed",
           "nl": "Weeralarm is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -921,6 +1012,13 @@
           "en": "current temp changed",
           "nl": "Huidige temp is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -946,6 +1044,13 @@
           "en": "feel temp changed",
           "nl": "Gevoelstemperatuur is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -971,6 +1076,13 @@
           "en": "Humidity changed",
           "nl": "Luchtvochtigheid is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -996,6 +1108,13 @@
           "en": "Wind speedMS changed",
           "nl": "Windsnelheid MS is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1021,6 +1140,13 @@
           "en": "wind force changed",
           "nl": "Windkracht is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1046,6 +1172,13 @@
           "en": "Wind speed KMH changed",
           "nl": "Windsnelheid KMH is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1071,6 +1204,13 @@
           "en": "Air pressure changed",
           "nl": "Luchtdruk is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1096,6 +1236,13 @@
           "en": "Air pressure MMHG changed",
           "nl": "Luchtdruk MMHG is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1121,6 +1268,13 @@
           "en": "Dew point changed",
           "nl": "Dauwpunt is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1146,6 +1300,13 @@
           "en": "Sight changed",
           "nl": "Zicht is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1171,6 +1332,13 @@
           "en": "Exp. max temp today changed",
           "nl": "Verw. max temp vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1196,6 +1364,13 @@
           "en": "Exp. min temp today changed",
           "nl": "Verw. min temp vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1221,6 +1396,13 @@
           "en": "Exp. wind force today changed",
           "nl": "Verw. windkracht vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1246,6 +1428,13 @@
           "en": "Exp. wind speed MS today changed",
           "nl": "Verw. windsnelheid MS vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1271,6 +1460,13 @@
           "en": "Exp. wind speed KMH today changed",
           "nl": "Verw. windsnelheid KMH vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1296,6 +1492,13 @@
           "en": "Exp. precipitation today changed",
           "nl": "Verw. neerslag vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1321,6 +1524,13 @@
           "en": "Exp. sunshine today changed",
           "nl": "Verw. zonkans vandaag is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1346,6 +1556,13 @@
           "en": "Exp. max temp tomorrow changed",
           "nl": "Verw. max temp morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1371,6 +1588,13 @@
           "en": "Exp. min temp tomorrow changed",
           "nl": "Verw. min temp morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1396,6 +1620,13 @@
           "en": "Exp. wind force tomorrow changed",
           "nl": "Verw. windkracht morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1421,6 +1652,13 @@
           "en": "Exp. wind speed MS tomorrow changed",
           "nl": "Verw. windsnelheid MS morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1446,6 +1684,13 @@
           "en": "Exp. wind speed KMH tomorrow changed",
           "nl": "Verw. windsnelheid KMH morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1471,6 +1716,13 @@
           "en": "Exp. precipitation tomorrow changed",
           "nl": "Verw. neerslag morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1496,6 +1748,13 @@
           "en": "Exp. sunshine tomorrow changed",
           "nl": "Verw. zonkans morgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1521,6 +1780,13 @@
           "en": "Exp. max temp day after tomorrow changed",
           "nl": "Verw. min temp overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1546,6 +1812,13 @@
           "en": "Exp. min temp day after tomorrow changed",
           "nl": "Verw. min temp overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1571,6 +1844,13 @@
           "en": "Exp. wind force day after tomorrow changed",
           "nl": "Verw. windkracht overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1596,6 +1876,13 @@
           "en": "Exp. wind speed MS day after tomorrow changed",
           "nl": "Verw. windsnelheid MS overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1621,6 +1908,13 @@
           "en": "Exp. wind speed KMH day after tomorrow changed",
           "nl": "Verw. windsnelheid KMH overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1646,6 +1940,13 @@
           "en": "Exp. precipitation day after tomorrow changed",
           "nl": "Verw. neerslag overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1671,6 +1972,13 @@
           "en": "Exp. sunshine day after tomorrow changed",
           "nl": "Verw. zonkans overmorgen is veranderd"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
         "tokens": [
           {
             "name": "new_value",
@@ -1696,6 +2004,60 @@
               "en": "Fetch new data",
               "nl": "Haal nieuwe gegevens"
             }
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "slightly_cloudy_or_clear",
+        "title": {
+          "en": "It !{{is|isn't}} slightly cloudy or clear ...",
+          "nl": "Het !{{is|is niet}} licht of on-bewolkt ..."
+        },
+        "titleFormatted": {
+          "en": "It !{{is|isn't}} slightly cloudy or clear [[when]]",
+          "nl": "Het !{{is|is niet}} licht of onbewolkt [[when]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          },
+          {
+            "name": "when",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "now",
+                "label": {
+                  "en": "now",
+                  "nl": "nu"
+                }
+              },
+              {
+                "id": "expected_today",
+                "label": {
+                  "en": "expected today",
+                  "nl": "verwacht vandaag"
+                }
+              },
+              {
+                "id": "expected_tomorrow",
+                "label": {
+                  "en": "expected tomorrow",
+                  "nl": "verwacht morgen"
+                }
+              },
+              {
+                "id": "expected_day_after_tomorrow",
+                "label": {
+                  "en": "expected day after tomorrow",
+                  "nl": "verwacht overmorgen"
+                }
+              }
+            ]
           }
         ]
       }

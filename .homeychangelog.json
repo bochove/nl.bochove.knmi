@@ -2,5 +2,9 @@
   "0.1.7": {
     "en": "initial release",
     "nl": "initiële versie"
+  },
+  "0.1.8": {
+    "en": "moved device specific trigger cards to the device and added condition card clear or slightly clouded",
+    "nl": "Apparaat specifieke triggers naar het apparaat verplaatst en wanneer kaart toegevoegd voor licht of onbewolkt"
   }
 }
