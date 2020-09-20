@@ -91,7 +91,7 @@ class KNMIDevice extends Homey.Device {
             default:
               weather = '';
           }
-          return weather === 'onbewolkt' || weather === 'licht bewolkt'; // Promise<boolean>
+          return ['onbewolkt', 'licht bewolkt', 'lichtbewolkt', 'zonnig'].includes(weather);
         });
 
       this.refresh();
