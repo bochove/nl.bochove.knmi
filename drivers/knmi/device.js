@@ -186,9 +186,10 @@ class KNMIDevice extends Homey.Device {
           if (!this.triggers[capability]) {
             this.log(`could not find the trigger for ${capability}`);
           } else {
-            this.triggers[capability].trigger({ new_value: value, old_value: currentValue }).catch(err => {
-              this.log(this.triggers[capability].id, err);
-            }).then(() => this.log(`fired trigger: ${this.triggers[capability].id}`));
+            this.triggers[capability].trigger(this, { new_value: value, old_value: currentValue })
+              .catch(err => {
+                this.log(this.triggers[capability].id, err);
+              }).then(() => this.log(`fired trigger: ${this.triggers[capability].id}`));
           }
         }
       } else {
