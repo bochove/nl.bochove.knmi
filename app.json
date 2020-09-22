@@ -425,7 +425,7 @@
             "type": "number",
             "title": {
               "en": "Exp. wind speed tomorrow KMH",
-              "nl": "Verw, windsnelheid morgen KMH"
+              "nl": "Verw. windsnelheid morgen KMH"
             },
             "example": {
               "en": "10",
@@ -2402,8 +2402,8 @@
     "expected_tomorrow_recap": {
       "type": "string",
       "title": {
-        "en": "Exp. recap today",
-        "nl": "Verw. weerbeeld vandaag"
+        "en": "Exp. recap tomorrow",
+        "nl": "Verw. weerbeeld morgen"
       },
       "getable": true,
       "setable": false,
