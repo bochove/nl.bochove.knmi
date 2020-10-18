@@ -3,6 +3,19 @@
 <head>
     <!-- ... -->
     <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+    <script type="text/javascript">
+      let savedValue = '';
+      let saveElement;
+      let weerlive_api_key;
+
+      function changed() {
+        if (weerlive_api_key.value === savedValue) {
+          saveElement.textContent = Homey.__('settings.saved');
+        } else {
+          saveElement.textContent = Homey.__('settings.save');
+        }
+      }
+    </script>
 </head>
 <body>
 <h1 data-i18n="settings.title">
@@ -21,27 +34,34 @@
 
     <div class="field row">
         <label for="weerlive_api_key">Api-Key</label>
-        <input id="weerlive_api_key" type="text" value="" />
+        <input id="weerlive_api_key" type="text" onkeyup="changed()" value=""/>
     </div>
 </fieldset>
 
-<button id="save" class="right">Save changes</button>
+<button id="save" class="right" data-i18n="settings.save"></button>
 
 <script type="text/javascript">
   // a method named 'onHomeyReady' must be present in your code
   function onHomeyReady(Homey) {
-    var weerlive_api_key = document.getElementById('weerlive_api_key');
-    var saveElement = document.getElementById('save');
+    weerlive_api_key = document.getElementById('weerlive_api_key');
+    saveElement = document.getElementById('save');
 
+    saveElement.textContent = Homey.__('settings.save');
     Homey.get('weerlive_api_key', function (err, key) {
       if (err) return Homey.alert(err);
       weerlive_api_key.value = key;
+      savedValue = key;
+      saveElement.textContent = Homey.__('settings.saved');
     });
 
-    saveElement.addEventListener('click', function (e) {
-      Homey.set('weerlive_api_key', weerlive_api_key.value, function (err) {
-        if (err) return Homey.alert(err);
+    saveElement.addEventListener('click', (e) => {
+      Homey.set('weerlive_api_key', weerlive_api_key.value, (err) => {
+        if (err) {
+          saveElement.textContent = Homey.__('settings.save');
+          return Homey.alert(err);
+        }
       });
+      saveElement.textContent = Homey.__('settings.saved');
     });
     Homey.ready();
   }
