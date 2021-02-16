@@ -2670,7 +2670,7 @@
       "uiComponent": "sensor"
     },
     "expected_tomorrow_wind_direction_degrees": {
-      "type": "string",
+      "type": "number",
       "title": {
         "en": "Exp. wind direction in degrees tomorrow",
         "nl": "Verw. windrichting in graden morgen"
@@ -2770,7 +2770,7 @@
       "uiComponent": "sensor"
     },
     "expected_day_after_tomorrow_wind_direction_degrees": {
-      "type": "string",
+      "type": "number",
       "title": {
         "en": "Exp. wind direction in degrees day after tomorrow",
         "nl": "Verw. windrichting in graden overmorgen"
