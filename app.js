@@ -18,6 +18,50 @@ class KNMI extends Homey.App {
           if (res.liveweer && Array.isArray(res.liveweer) && res.liveweer.length === 1) {
             res = res.liveweer[0];
           }
+
+          function windDirectionToDegrees(direction) {
+            const degrees = {
+              N: 0,
+              NNO: 22.5,
+              NON: 22.5,
+              ONN: 22.5,
+              NO: 45,
+              ON: 45,
+              OON: 67.5,
+              ONO: 67.5,
+              NOO: 67.5,
+              O: 90,
+              OOZ: 112.5,
+              OZO: 112.5,
+              ZOO: 112.5,
+              ZO: 135,
+              OZ: 135,
+              ZZO: 157.5,
+              ZOZ: 157.5,
+              OZZ: 157.5,
+              Z: 180,
+              ZZW: 202.5,
+              ZWZ: 202.5,
+              WZZ: 202.5,
+              ZW: 225,
+              WZ: 225,
+              WWZ: 247.5,
+              WZW: 247.5,
+              ZWW: 247.5,
+              W: 270,
+              WWN: 292.5,
+              WNW: 292.5,
+              NWW: 292.5,
+              NW: 315,
+              WN: 315,
+              NNW: 337.5,
+              NWN: 337.5,
+              WNN: 337.5,
+            };
+
+            return degrees[direction.toUpperCase()] || null;
+          }
+
           const tokens = {
             city: res.plaats ? res.plaats : '',
             currentTemp: parseFloat(res.temp) ? parseFloat(res.temp) : 0,
@@ -25,6 +69,7 @@ class KNMI extends Homey.App {
             recap: res.samenv ? res.samenv : '',
             humidity: parseFloat(res.lv) ? parseFloat(res.lv) : 0,
             windDirection: res.windr ? res.windr : '',
+            windDirectionDegrees: windDirectionToDegrees(res.windr),
             windSpeedMS: parseFloat(res.windms) ? parseFloat(res.windms) : 0,
             windForce: parseFloat(res.winds) ? parseFloat(res.winds) : 0,
             windSpeedKMH: parseFloat(res.windkmh) ? parseFloat(res.windkmh) : 0,
@@ -42,6 +87,7 @@ class KNMI extends Homey.App {
             expectedTodayWindSpeedMS: parseFloat(res.d0windms) ? parseFloat(res.d0windms) : 0,
             expectedTodayWindSpeedKMH: parseFloat(res.d0windkmh) ? parseFloat(res.d0windkmh) : 0,
             expectedTodayWindDirection: res.d0windr ? res.d0windr : '',
+            expectedTodayWindDirectionDegrees: windDirectionToDegrees(res.d0windr),
             expectedTodayPrecipitation: parseFloat(res.d0neerslag) ? parseFloat(res.d0neerslag) : 0,
             expectedTodaySunshine: parseFloat(res.d0zon) ? parseFloat(res.d0zon) : 0,
             expectedTomorrowRecap: res.d1weer ? res.d1weer : '',
@@ -51,6 +97,7 @@ class KNMI extends Homey.App {
             expectedTomorrowWindSpeedMS: parseFloat(res.d1windms) ? parseFloat(res.d1windms) : 0,
             expectedTomorrowWindSpeedKMH: parseFloat(res.d1windkmh) ? parseFloat(res.d1windkmh) : 0,
             expectedTomorrowWindDirection: res.d1windr ? res.d1windr : '',
+            expectedTomorrowWindDirectionDegrees: windDirectionToDegrees(res.d1windr),
             expectedTomorrowPrecipitation: parseFloat(res.d1neerslag)
               ? parseFloat(res.d1neerslag) : 0,
             expectedTomorrowSunshine: parseFloat(res.d1zon) ? parseFloat(res.d1zon) : 0,
@@ -64,6 +111,7 @@ class KNMI extends Homey.App {
             expectedDayAfterTomorrowWindSpeedKMH: parseFloat(res.d2windkmh)
               ? parseFloat(res.d2windkmh) : 0,
             expectedDayAfterTomorrowWindDirection: res.d2windr ? res.d2windr : '',
+            expectedDayAfterTomorrowWindDirectionDegrees: windDirectionToDegrees(res.d2windr),
             expectedDayAfterTomorrowPrecipitation: parseFloat(res.d2neerslag)
               ? parseFloat(res.d2neerslag) : 0,
             expectedDayAfterTomorrowSunshine: parseFloat(res.d2zon) ? parseFloat(res.d2zon) : 0,

@@ -181,7 +181,7 @@ class KNMIDevice extends Homey.Device {
         this.setCapability('windDirection', res.windr ? res.windr : '');
         this.setCapability('windDirectionDegrees', this.windDirectionToDegrees(res.windr));
         this.setCapability('windSpeedMS', parseFloat(res.windms) ? parseFloat(res.windms) : 0);
-        this.setCapability('windForce', parseFloat(res.windk) ? parseFloat(res.windk) : 0);
+        this.setCapability('windForce', parseFloat(res.winds) ? parseFloat(res.winds) : 0);
         this.setCapability('windSpeedKMH', parseFloat(res.windkmh) ? parseFloat(res.windkmh) : 0);
         this.setCapability('airPressure', parseFloat(res.luchtd) ? parseFloat(res.luchtd) : 0);
         this.setCapability('airPressureMMHG', parseFloat(res.ldmmhg) ? parseFloat(res.ldmmhg) : 0);
@@ -193,7 +193,7 @@ class KNMIDevice extends Homey.Device {
         this.setCapability('expectedTodayRecap', res.d0weer ? res.d0weer.toLowerCase() : '');
         this.setCapability('expectedTodayMaxTemp', parseFloat(res.d0tmax) ? parseFloat(res.d0tmax) : 0);
         this.setCapability('expectedTodayMinTemp', parseFloat(res.d0tmin) ? parseFloat(res.d0tmin) : 0);
-        this.setCapability('expectedTodayWindForce', parseFloat(res.d0windk) ? parseFloat(res.d0windk) : 0);
+        this.setCapability('expectedTodayWindForce', parseFloat(res.d0winds) ? parseFloat(res.d0winds) : 0);
         this.setCapability('expectedTodayWindSpeedMS', parseFloat(res.d0windms) ? parseFloat(res.d0windms) : 0);
         this.setCapability('expectedTodayWindSpeedKMH', parseFloat(res.d0windkmh) ? parseFloat(res.d0windkmh) : 0);
         this.setCapability('expectedTodayWindDirection', res.d0windr ? res.d0windr : '');
@@ -203,7 +203,7 @@ class KNMIDevice extends Homey.Device {
         this.setCapability('expectedTomorrowRecap', res.d1weer ? res.d1weer.toLowerCase() : '');
         this.setCapability('expectedTomorrowMaxTemp', parseFloat(res.d1tmax) ? parseFloat(res.d1tmax) : 0);
         this.setCapability('expectedTomorrowMinTemp', parseFloat(res.d1tmin) ? parseFloat(res.d1tmin) : 0);
-        this.setCapability('expectedTomorrowWindForce', parseFloat(res.d1windk) ? parseFloat(res.d1windk) : 0);
+        this.setCapability('expectedTomorrowWindForce', parseFloat(res.d1winds) ? parseFloat(res.d1winds) : 0);
         this.setCapability('expectedTomorrowWindSpeedMS', parseFloat(res.d1windms) ? parseFloat(res.d1windms) : 0);
         this.setCapability('expectedTomorrowWindSpeedKMH', parseFloat(res.d1windkmh) ? parseFloat(res.d1windkmh) : 0);
         this.setCapability('expectedTomorrowWindDirection', this.wres.d1windr ? res.d1windr : '');
@@ -213,7 +213,7 @@ class KNMIDevice extends Homey.Device {
         this.setCapability('expectedDayAfterTomorrowRecap', res.d2weer ? res.d2weer.toLowerCase() : '');
         this.setCapability('expectedDayAfterTomorrowMaxTemp', parseFloat(res.d2tmax) ? parseFloat(res.d2tmax) : 0);
         this.setCapability('expectedDayAfterTomorrowMinTemp', parseFloat(res.d2tmin) ? parseFloat(res.d2tmin) : 0);
-        this.setCapability('expectedDayAfterTomorrowWindForce', parseFloat(res.d2windk) ? parseFloat(res.d2windk) : 0);
+        this.setCapability('expectedDayAfterTomorrowWindForce', parseFloat(res.d2winds) ? parseFloat(res.d2winds) : 0);
         this.setCapability('expectedDayAfterTomorrowWindSpeedMS', parseFloat(res.d2windms) ? parseFloat(res.d2windms) : 0);
         this.setCapability('expectedDayAfterTomorrowWindSpeedKMH', parseFloat(res.d2windkmh) ? parseFloat(res.d2windkmh) : 0);
         this.setCapability('expectedDayAfterTomorrowWindDirection', res.d2windr ? res.d2windr : '');
