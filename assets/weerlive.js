@@ -87,7 +87,7 @@ module.exports = function retrieveWeerliveData(lat, lon, key) {
         expectedTodayRecap: res.d0weer ? res.d0weer : '',
         expectedTodayMaxTemp: parseFloat(res.d0tmax) ? parseFloat(res.d0tmax) : 0,
         expectedTodayMinTemp: parseFloat(res.d0tmin) ? parseFloat(res.d0tmin) : 0,
-        expectedTodayWindForce: parseFloat(res.d0winds) ? parseFloat(res.d0winds) : 0,
+        expectedTodayWindForce: parseFloat(res.d0windk) ? parseFloat(res.d0windk) : 0,
         expectedTodayWindSpeedMS: parseFloat(res.d0windms) ? parseFloat(res.d0windms) : 0,
         expectedTodayWindSpeedKMH: parseFloat(res.d0windkmh) ? parseFloat(res.d0windkmh) : 0,
         expectedTodayWindDirection: res.d0windr ? res.d0windr : '',
@@ -97,7 +97,7 @@ module.exports = function retrieveWeerliveData(lat, lon, key) {
         expectedTomorrowRecap: res.d1weer ? res.d1weer : '',
         expectedTomorrowMaxTemp: parseFloat(res.d1tmax) ? parseFloat(res.d1tmax) : 0,
         expectedTomorrowMinTemp: parseFloat(res.d1tmin) ? parseFloat(res.d1tmin) : 0,
-        expectedTomorrowWindForce: parseFloat(res.d1winds) ? parseFloat(res.d1winds) : 0,
+        expectedTomorrowWindForce: parseFloat(res.d1windk) ? parseFloat(res.d1windk) : 0,
         expectedTomorrowWindSpeedMS: parseFloat(res.d1windms) ? parseFloat(res.d1windms) : 0,
         expectedTomorrowWindSpeedKMH: parseFloat(res.d1windkmh) ? parseFloat(res.d1windkmh) : 0,
         expectedTomorrowWindDirection: res.d1windr ? res.d1windr : '',
@@ -108,8 +108,8 @@ module.exports = function retrieveWeerliveData(lat, lon, key) {
         expectedDayAfterTomorrowRecap: res.d2weer ? res.d2weer : '',
         expectedDayAfterTomorrowMaxTemp: parseFloat(res.d2tmax) ? parseFloat(res.d2tmax) : 0,
         expectedDayAfterTomorrowMinTemp: parseFloat(res.d2tmin) ? parseFloat(res.d2tmin) : 0,
-        expectedDayAfterTomorrowWindForce: parseFloat(res.d2winds)
-          ? parseFloat(res.d2winds) : 0,
+        expectedDayAfterTomorrowWindForce: parseFloat(res.d2windk)
+          ? parseFloat(res.d2windk) : 0,
         expectedDayAfterTomorrowWindSpeedMS: parseFloat(res.d2windms)
           ? parseFloat(res.d2windms) : 0,
         expectedDayAfterTomorrowWindSpeedKMH: parseFloat(res.d2windkmh)
