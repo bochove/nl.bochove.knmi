@@ -58,7 +58,7 @@ module.exports = function retrieveWeerliveData(lat, lon, key) {
     }
     return response;
   };
-  return fetch(`http://weerlive.nl/api/json-data-10min.php?key=${key}&locatie=${lat},${lon}`)
+  return fetch(`https://weerlive.nl/api/json-data-10min.php?key=${key}&locatie=${lat},${lon}`)
     .then(res => res.json()).then(res => {
       // noinspection JSUnresolvedVariable
       if (res.liveweer && Array.isArray(res.liveweer) && res.liveweer.length === 1) {
