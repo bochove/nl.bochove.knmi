@@ -1,6 +1,6 @@
 {
   "id": "nl.bochove.knmi",
-  "version": "0.1.9",
+  "version": "0.1.13",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -130,6 +130,18 @@
             "example": {
               "en": "W",
               "nl": "W"
+            }
+          },
+          {
+            "name": "windDirectionDegrees",
+            "type": "number",
+            "title": {
+              "en": "Wind direction in degrees",
+              "nl": "Windrichting in graden"
+            },
+            "example": {
+              "en": "180",
+              "nl": "180"
             }
           },
           {
@@ -337,6 +349,18 @@
             }
           },
           {
+            "name": "expectedTodayWindDirectionDegrees",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind direction today in degrees",
+              "nl": "Verw. windrichting vandaag in graden"
+            },
+            "example": {
+              "en": "180",
+              "nl": "180"
+            }
+          },
+          {
             "name": "expectedTodayPrecipitation",
             "type": "number",
             "title": {
@@ -445,6 +469,18 @@
             }
           },
           {
+            "name": "expectedTomorrowWindDirectionDegrees",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind direction tomorrow in degrees",
+              "nl": "Verw. windrichting morgen in graden"
+            },
+            "example": {
+              "en": "180",
+              "nl": "180"
+            }
+          },
+          {
             "name": "expectedTomorrowPrecipitation",
             "type": "number",
             "title": {
@@ -550,6 +586,18 @@
             "example": {
               "en": "W",
               "nl": "W"
+            }
+          },
+          {
+            "name": "expectedDayAfterTomorrowWindDirectionDegrees",
+            "type": "number",
+            "title": {
+              "en": "Exp. wind direction day after tomorrow in degrees",
+              "nl": "Verw. windrichting overmorgen in graden"
+            },
+            "example": {
+              "en": "180",
+              "nl": "180"
             }
           },
           {
@@ -679,6 +727,38 @@
           {
             "name": "old_value",
             "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "wind_direction_degrees_changed",
+        "title": {
+          "en": "Wind direction in degrees changed",
+          "nl": "Windrichting in graden is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
             "title": {
               "en": "Old value",
               "nl": "Oude waarde"
@@ -847,6 +927,38 @@
         ]
       },
       {
+        "id": "expected_today_wind_direction_degrees_changed",
+        "title": {
+          "en": "Exp. wind direction in degrees today changed",
+          "nl": "Verw. windrichting in graden vandaag is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
         "id": "expected_tomorrow_recap_changed",
         "title": {
           "en": "Exp. recap tomorrow changed",
@@ -911,6 +1023,38 @@
         ]
       },
       {
+        "id": "expected_tomorrow_wind_direction_degrees_changed",
+        "title": {
+          "en": "Exp. wind direction in degrees tomorrow changed",
+          "nl": "Verw. windrichting in graden morgen is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
         "id": "expected_day_after_tomorrow_recap_changed",
         "title": {
           "en": "Exp. recap day after tomorrow changed",
@@ -967,6 +1111,38 @@
           {
             "name": "old_value",
             "type": "string",
+            "title": {
+              "en": "Old value",
+              "nl": "Oude waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "expected_day_after_tomorrow_wind_direction_degrees_changed",
+        "title": {
+          "en": "Exp. wind direction in degrees day after tomorrow changed",
+          "nl": "Verw. windrichting in graden overmorgen is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=knmi"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "new_value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          },
+          {
+            "name": "old_value",
+            "type": "number",
             "title": {
               "en": "Old value",
               "nl": "Oude waarde"
@@ -2087,6 +2263,7 @@
         "recap",
         "humidity",
         "wind_direction",
+        "wind_direction_degrees",
         "wind_speed_m_s",
         "wind_force",
         "wind_speed_k_m_h",
@@ -2104,6 +2281,7 @@
         "expected_today_wind_speed_m_s",
         "expected_today_wind_speed_k_m_h",
         "expected_today_wind_direction",
+        "expected_today_wind_direction_degrees",
         "expected_today_precipitation",
         "expected_today_sunshine",
         "expected_tomorrow_recap",
@@ -2113,6 +2291,7 @@
         "expected_tomorrow_wind_speed_m_s",
         "expected_tomorrow_wind_speed_k_m_h",
         "expected_tomorrow_wind_direction",
+        "expected_tomorrow_wind_direction_degrees",
         "expected_tomorrow_precipitation",
         "expected_tomorrow_sunshine",
         "expected_day_after_tomorrow_recap",
@@ -2122,6 +2301,7 @@
         "expected_day_after_tomorrow_wind_speed_m_s",
         "expected_day_after_tomorrow_wind_speed_k_m_h",
         "expected_day_after_tomorrow_wind_direction",
+        "expected_day_after_tomorrow_wind_direction_degrees",
         "expected_day_after_tomorrow_precipitation",
         "expected_day_after_tomorrow_sunshine",
         "current_weather_alarm"
@@ -2204,6 +2384,16 @@
       "title": {
         "en": "Wind direction",
         "nl": "Windrichting"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "wind_direction_degrees": {
+      "type": "number",
+      "title": {
+        "en": "Wind direction in degrees",
+        "nl": "Windrichting in graden"
       },
       "getable": true,
       "setable": false,
@@ -2379,6 +2569,16 @@
       "setable": false,
       "uiComponent": "sensor"
     },
+    "expected_today_wind_direction_degrees": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind direction in degrees today",
+        "nl": "Verw. windrichting in graden vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "expected_today_precipitation": {
       "type": "number",
       "title": {
@@ -2469,6 +2669,16 @@
       "setable": false,
       "uiComponent": "sensor"
     },
+    "expected_tomorrow_wind_direction_degrees": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind direction in degrees tomorrow",
+        "nl": "Verw. windrichting in graden morgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "expected_tomorrow_precipitation": {
       "type": "number",
       "title": {
@@ -2554,6 +2764,16 @@
       "title": {
         "en": "Exp. wind direction day after tomorrow",
         "nl": "Verw. windrichting overmorgen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "expected_day_after_tomorrow_wind_direction_degrees": {
+      "type": "number",
+      "title": {
+        "en": "Exp. wind direction in degrees day after tomorrow",
+        "nl": "Verw. windrichting in graden overmorgen"
       },
       "getable": true,
       "setable": false,
