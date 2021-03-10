@@ -14,5 +14,9 @@
   "0.1.12": {
     "en": "Added wind direction in degrees",
     "nl": "Windrichting in graden toegevoegd"
+  },
+  "0.1.13": {
+    "en": "Changed url to https",
+    "nl": "Url aangepast naar https"
   }
 }
