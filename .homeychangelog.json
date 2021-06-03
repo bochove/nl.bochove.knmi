@@ -18,5 +18,9 @@
   "0.1.13": {
     "en": "Changed url to https",
     "nl": "Url aangepast naar https"
+  },
+  "0.1.14": {
+    "en": "Fixed slightly cloudy or clear card",
+    "nl": "Fixed licht of onbewolkt kaart"
   }
 }

@@ -79,6 +79,7 @@ class KNMIDevice extends Homey.Device {
           return false;
         }
         let weather;
+        this.log(args.when);
         switch (args.when) {
           case 'now':
             weather = this.getCapabilityValue('recap');
@@ -95,7 +96,8 @@ class KNMIDevice extends Homey.Device {
           default:
             weather = '';
         }
-        return ['onbewolkt', 'licht bewolkt', 'lichtbewolkt', 'zonnig'].includes(weather);
+        this.log(weather);
+        return ['onbewolkt', 'licht bewolkt', 'lichtbewolkt', 'zonnig'].includes(weather.toLowerCase());
       });
 
     this.refresh();
