@@ -22,5 +22,9 @@
   "0.1.14": {
     "en": "Fixed slightly cloudy or clear card",
     "nl": "Fixed licht of onbewolkt kaart"
+  },
+  "0.1.15": {
+    "en": "Added delay for pairing, so Homey can perhaps handle popups like described in the documentation",
+    "nl": "Timeout toegevoegd zodat Homey wellicht popups kan gaan tonen."
   }
 }

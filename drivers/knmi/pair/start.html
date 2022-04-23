@@ -2,19 +2,18 @@
 
 	Homey.setTitle(__('pair.start.title'));
 
-	Homey.on('errors', function(message, callback){
-		Homey.alert(message);
-		callback(null, 'ERROR');
-		Homey.done();
+	Homey.on('errors', async (message) => {
+		await Homey.alert(message, 'error');
+        Homey.done();
 	});
 
-	Homey.on('continue', function () {
+	Homey.on('continue', () => {
         Homey.addDevice({
             name: 'KNMI weather',
             data: {
                 id: 'HomeyLocation',
             },
-        }, function( err, result ){
+        }, ( err, result ) => {
             if( err ) return Homey.error(err);
             console.log( result);
         });

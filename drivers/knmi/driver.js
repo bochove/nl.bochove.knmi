@@ -20,28 +20,28 @@ class KNMIDriver extends Homey.Driver {
   }
 
   async onPair(socket) {
-    const key = this.homey.settings.get('weerlive_api_key');
-    if (!key) {
-      socket.emit('errors', 'NO API key provided, go to general settings to change.', () => {
-      });
-      return;
-    }
+    const pair = async () => {
+      const key = this.homey.settings.get('weerlive_api_key');
+      if (!key) {
+        await socket.emit('errors', 'NO API key provided, go to general settings to change.');
+        return;
+      }
 
-    const lat = this.homey.geolocation.getLatitude();
-    const lon = this.homey.geolocation.getLongitude();
-    fetch(`http://weerlive.nl/api/json-data-10min.php?key=${key}&locatie=${lat},${lon}`)
-      .then(res => res.json()).then(() => {
+      const lat = this.homey.geolocation.getLatitude();
+      const lon = this.homey.geolocation.getLongitude();
+      fetch(`http://weerlive.nl/api/json-data-10min.php?key=${key}&locatie=${lat},${lon}`)
+          .then(res => res.json()).then(() => {
         this.log('validated api key, continue');
-        setTimeout(() => {
-          socket.emit('continue', null);
+        setTimeout(async () => {
+          await socket.emit('continue', null);
         }, 500);
-      }).catch(err => {
+      }).catch(async err => {
         this.log(err);
-        socket.emit('errors', 'No valid response from weerlive, check your API key', () => {
-        });
+        await socket.emit('errors', 'No valid response from weerlive, check your API key');
       });
+    };
+    setTimeout(pair,2000);
   }
-
 }
 
 module.exports = KNMIDriver;
